@@ -1,0 +1,235 @@
+.account {
+
+	font-family: 'Poppins';
+
+	// .account__decor
+
+	&__decor {
+		display: none;
+		@include _992 {
+			position: absolute;
+			right: calc(50% - 700px); top: 200px;
+			z-index: -1;
+			user-select: none; pointer-events: none;
+			display: block;
+
+			& img {
+				width: 700px; height: auto;
+				transform: translate(7%,0);
+				filter: blur(5px);
+			}
+		}
+	}
+
+
+	// .account__title 
+
+	&__title {
+		margin-bottom: 30px; margin-left: 30px;
+		font-weight: 600;
+		@include _768 {
+			grid-column: 2 span;
+			margin-bottom: 0; margin-left: 0;
+		}
+	}
+
+	// .account__body
+
+	&__body {
+		
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 10px 0;
+		@include _768 {
+			grid-template-columns: 234px auto;
+			gap: 32px 20px;
+
+			background: rgba(255, 255, 255, 0.75);
+			box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.07);
+			backdrop-filter: blur(7.5px);
+			border-radius: 8px;
+			padding: 30px;
+		}
+		
+	}
+
+	// .account__aside
+
+	&__aside {
+		align-self: self-start;
+		background: rgba(255, 255, 255, 0.75);
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.07);
+		backdrop-filter: blur(7.5px);
+		border-radius: 8px;
+		padding: 30px 0;
+		@include _768 {
+			padding: 30px;
+			background: #F7F8FA;
+			box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+			border-radius: 8px;
+		}
+	}
+
+	// .account__nav
+
+	&__nav {
+		& ul {
+			display: flex;
+			flex-direction: column;
+
+			margin: -15px 0;
+
+			& li {
+				
+				@include _768 {
+					&:not(:last-child) {
+						border-bottom: 1px dashed #DBDBDB;
+					}
+				}
+
+				& a {
+					display: block;
+					padding: 15px 30px;
+					font-size: 0.875rem;
+					line-height: 150%;
+					@include _768 {
+						padding: 15px 0;
+						font-size: 1rem;
+					}
+					
+					& span {
+						background: var(--accent-gradient-alt);
+						background-clip: text;
+						background-size: 250%;
+						color: transparent;
+
+						background-position-x: 100%;
+
+						transition: background-position-x .3s ease;
+						
+					}
+
+					&:hover span, &.current span {
+						background-position-x: 0%;
+					}
+
+					&.current {
+						background: rgba(153, 251, 255, 0.31);
+					}
+
+					@include _768 {
+						&.current {
+							background: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// .account__main
+
+	&__main {
+	}
+
+	// .account__info
+
+	&__info {
+
+		display: grid;
+		grid-template-columns: 100%;
+		gap: 10px;
+		@include _768 {
+			gap: 20px;
+		}
+
+		@include _992 {
+			grid-template-columns: minmax(300px, 37.5%) auto;
+		}
+
+		// .account__info--col
+
+		&--col {
+			background: #FFFFFF;
+			box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.07);
+			backdrop-filter: blur(7.5px);
+			/* Note: backdrop-filter has minimal browser support */
+
+			border-radius: 15px;
+
+			padding: 30px;
+			
+			@include _768 {
+				padding: 0;
+				background: transparent;
+				box-shadow: none;
+			}
+		}
+
+		// .account__info--block
+
+		&--block {
+			
+			
+			@include _768 {
+				padding: 25px 30px 36px 30px;
+				background: #F7F8FA;
+				box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+				border-radius: 8px;
+			}
+
+			display: flex;
+			flex-direction: column;
+			&:last-child {
+				min-height: 100%;
+			}
+			&:not(:last-child) {
+				margin-bottom: 30px;
+				@include _768 {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		// .account__info--title
+
+		&--title {
+			align-self: self-start;
+			margin-bottom: 10px;
+		}
+
+		// .account__info--param
+
+		&--param {
+			padding-top: 10px;
+
+			font-size: 0.875rem;
+			line-height: 150%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			& span:last-child {
+				color: #8A8A8A;
+			}
+		}
+
+		// .account__info--btn-wrapper
+
+		&--btn-wrapper {
+			margin-top: 10px;
+		}
+
+		// .account__info--btn
+
+		&--btn {
+			width: 100%;
+		}
+	}
+}
+
+@import 'order-history';
+@import 'shipping-address';
+@import 'settings';
+@import 'reviews';
+@import 'order';

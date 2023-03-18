@@ -1,0 +1,154 @@
+.product {
+
+	padding-top: 95px;
+	@include _768 {
+		padding-top: 115px;
+	}
+	
+	@include _992 {
+		padding-top: 168px;
+	}
+
+	// .product__header
+
+	&__header {
+		display: flex;
+		justify-content: center;
+
+		@include _768 {
+			display: block;
+		}
+	}
+
+	// .product__title
+
+	&__title {
+		text-align: center;
+		@include _768 {
+			text-align: left;
+		}
+	}
+
+	// .product__main
+
+	&__main {
+		padding-top: 40px;
+		max-width: 970px;
+
+		@include _768 {
+			padding-top: 70px;
+
+			display: grid;
+			grid-template-columns: 45.35% auto;
+			gap: 30px;
+		}
+
+		position: relative;
+	}
+
+	// .product__image
+
+	&__image {
+
+		// .product__image--body
+
+		&--body {
+			width: 100%; padding-top: 100%;
+		}
+	}
+
+	// .product__info
+
+	&__info {
+		padding-top: 60px;
+		@include _768 {
+			padding-top: 0;
+		}
+	}
+
+	// .product__name
+
+	&__name {
+		max-width: 313px;
+
+		font-size: 1.875rem;
+		line-height: 120%;
+		
+	}
+
+	// .product__price
+
+	&__price {
+		margin-top: 25px;
+
+		display: inline-block;
+		font-weight: 600;
+		font-size: 2.25rem;
+		line-height: 150%;
+	}
+
+	// .product__buy
+
+	&__buy {
+		padding-top: 10px;
+		@media (min-width: 390px) {
+			padding-top: 10px;
+		}
+	}
+
+	// .product__info-list
+
+	&__info-list {
+		padding-top: 30px;
+
+		display: flex;
+		flex-direction: column;
+
+		& li {
+			padding: 20px 0;
+			&:not(:last-child) {
+				border-bottom: 1px dashed #DBDBDB;
+			}
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@include _768 {
+				display: block;
+			}
+
+			& b {
+				font-weight: 600;
+				font-size: 1.25rem;
+				line-height: 150%;
+				padding-right: 10px;
+			}
+
+			& span {
+				line-height: 150%;
+				background: var(--accent-gradient-2);
+				background-clip: text;
+				color: transparent;
+			}
+		}
+	}
+
+	// .product__decor
+
+	&__decor {
+		display: none;
+		@include _992 {
+			display: block;
+			user-select: none; pointer-events: none;
+			z-index: -1;
+			position: absolute;
+			right: 0; top: 0;
+			transform: translate(150%,0);
+			& img {
+				width: 240px; height: auto;
+				filter: blur(7px);
+			}
+		}
+	}
+}

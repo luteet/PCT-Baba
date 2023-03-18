@@ -1,0 +1,66 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="account container section-start section-end">
+			<div class="account__decor">
+				<picture>
+					<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+					<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="account__body">
+				<h2 class="account__title title hide-on-mob">
+					<span class="gradient-text">Order history</span>
+				</h2>
+				@@include("html/_account-aside.html", {
+					"title": 'Order history'
+				})
+				<div class="account__main">
+					<div class="account__order-history account-order-history">
+						<div class="account-order-history__table">
+							<div class="account-order-history__table--head">
+								<span>Date</span>
+								<span>Order number</span>
+								<span>Total</span>
+								<span>Tracking number</span>
+								<span>Status</span>
+							</div>
+							<div class="account-order-history__table--body">
+								@@loop("html/_account-order-history-item.html", [
+									{},
+									{},
+									{},
+									{},
+									{},
+								])
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

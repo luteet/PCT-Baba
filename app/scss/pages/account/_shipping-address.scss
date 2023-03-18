@@ -1,0 +1,55 @@
+.account-shipping-address {
+
+	display: grid;
+	grid-template-columns: 100%;
+
+	@include _550 {
+		gap: 30px 10px;
+		grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+	}
+
+	padding: 15px;
+
+	@media (min-width: 390px) {
+		padding: 30px;
+	}
+	background: #FFFFFF;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.07);
+	border-radius: 15px;
+
+	@include _992 {
+		padding: 0;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	// .account-shipping-address__label
+
+	&__label {
+		align-self: self-end;
+		font-family: var(--main-font);
+
+		&:not(:first-child) {
+			& .form-label__bold-name {
+				display: inline-block;
+				margin-top: 25px;
+			}
+		}
+
+		@include _550 {
+			& .form-label__bold-name {
+				margin-top: 0;
+			}
+		}
+	}
+
+	// .account-shipping-address__submit
+
+	&__submit {
+		margin-top: 30px;
+		@include _550 {
+			grid-column: 2 span;
+			margin-top: 0;
+		}
+	}
+}

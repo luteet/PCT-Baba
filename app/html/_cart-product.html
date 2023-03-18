@@ -1,0 +1,48 @@
+<div class="cart__product">
+	<button class="cart__product--remove" type="button" title="Remove product from cart">
+		<svg width="22" height="22" viewBox="0 0 512 512" class="hide-on-tablet">
+			<use xlink:href="img/sprites.svg#remove"></use>
+		</svg>
+		<svg width="19" height="19" viewBox="0 0 512 512" class="visible-on-tablet">
+			<use xlink:href="img/sprites.svg#trash"></use>
+		</svg>
+	</button>
+	<div class="cart__product--info">
+		<div class="cart__product--image">
+			<picture>
+				<source srcset="img/cart/product-image.webp" type="image/webp">
+				<img src="img/cart/product-image.jpg" alt="" width="40" height="40" loading="lazy">
+			</picture>
+		</div>
+		<h3 class="cart__product--name gradient-text">
+			Lilly Humalin R 100
+			IU 3 ml 5 cart
+		</h3>
+	</div>
+	<span class="cart__product--value _price">
+		<b><span>€ 30</span></b>
+		<span class="cart__product--param-name">Price</span>
+	</span>
+	<span class="cart__product--value _subtotal">
+		<b><span>€ 30</span></b>
+		<span class="cart__product--param-name">Subtotal</span>
+	</span>
+	<div class="cart__product--amount">
+		<div class="cart__product--amount-block product-amount">
+			<button class="cart__product--amount-btn product-amount-btn _minus" type="button" title="Minus">
+				<svg width="10" height="10" viewBox="0 0 512 512">
+					<use xlink:href="img/sprites.svg#play"></use>
+				</svg>
+			</button>
+			<input type="tel" name="length" required min="1" value="1" placeholder="0" class="cart__product--amount-input product-amount-length">
+			<button class="cart__product--amount-btn product-amount-btn _plus" type="button" title="Plus">
+				<svg width="10" height="10" viewBox="0 0 512 512">
+					<use xlink:href="img/sprites.svg#play"></use>
+				</svg>
+			</button>
+		</div>
+		<span class="cart__product--amount-name cart__product--param-name">
+			Quantity
+		</span>
+	</div>
+</div>

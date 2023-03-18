@@ -1,0 +1,127 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="cart container _min section-start">
+			<div class="cart__decor">
+				<picture>
+					<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+					<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="cart__header">
+				<h2 class="cart__title alt-section-title">
+					<span>
+						<svg width="30" height="30" viewBox="0 0 292 292">
+							<use xlink:href="img/sprites.svg#cardiogram"></use>
+						</svg>
+					</span>
+					<span class="gradient-text">
+						Cart
+					</span>
+				</h2>
+				<div class="cart__refresh visible-on-tablet">
+					<a href="cart.html" class="cart__refresh--btn" aria-label="Update cart">
+						<svg width="22" height="22" viewBox="0 0 512 512" class="hide-on-tablet">
+							<use xlink:href="img/sprites.svg#refresh"></use>
+						</svg>
+						<svg width="22" height="22" viewBox="0 0 512 512" class="visible-on-tablet">
+							<use xlink:href="img/sprites.svg#refresh-2"></use>
+						</svg>
+						<span>Update cart</span>
+					</a>
+				</div>
+			</div>
+			<form action="#" class="cart__body">
+				<div class="cart__table">
+					<div class="cart__table--head">
+						<b>Product</b>
+						<b>Price</b>
+						<b>Quantity</b>
+						<b>Subtotal</b>
+					</div>
+					@@loop("html/_cart-product.html", [
+						{},
+						{},
+						{},
+						{},
+					])
+				</div>
+				<div class="cart__add-row">
+					<div class="cart__promo">
+						<label class="cart__promo--label">
+							<input type="text" name="promocode" placeholder="Coupon code" class="cart__promo--input input">
+							<span class="cart__promo--placeholder">
+								Coupon code
+							</span>
+						</label>
+						<button class="cart__promo--btn btn" type="button">
+							APPLY COUPON
+						</button>
+					</div>
+					<div class="cart__refresh hide-on-tablet">
+						<a href="cart.html" class="cart__refresh--btn" aria-label="Update cart">
+							<svg width="22" height="22" viewBox="0 0 512 512" class="hide-on-tablet">
+								<use xlink:href="img/sprites.svg#refresh"></use>
+							</svg>
+							<svg width="22" height="22" viewBox="0 0 512 512" class="visible-on-tablet">
+								<use xlink:href="img/sprites.svg#refresh-2"></use>
+							</svg>
+							<span>Update cart</span>
+						</a>
+					</div>
+				</div>
+				<div class="cart__footer">
+					<div class="cart__total">
+						<ul>
+							<li>
+								<b>Subtotal:</b>
+								<div>
+									<b>€ 40</b>
+								</div>
+							</li>
+							<li>
+								<b>Shipping:</b>
+								<div>
+									<span>Shipping:</span> <b>€ 40</b><br>
+									<span>Shipping options will be updated during checkout.</span>
+								</div>
+							</li>
+							<li>
+								<b>Total:</b>
+								<div>
+									<strong class="gradient-text-2">€ 100</strong>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<button class="cart__submit btn" type="button">
+						Procced to checkout
+					</button>
+				</div>
+			</form>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

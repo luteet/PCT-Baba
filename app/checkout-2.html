@@ -1,0 +1,399 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="checkout container _min section-start section-end">
+			<div class="checkout__decor">
+				<picture>
+					<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+					<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="checkout__header">
+				<h2 class="checkout__title alt-section-title">
+					<span>
+						<svg width="30" height="30" viewBox="0 0 292 292">
+							<use xlink:href="img/sprites.svg#cardiogram"></use>
+						</svg>
+					</span>
+					<span class="gradient-text">
+						Checkout
+					</span>
+				</h2>
+			</div>
+			<form action="#" class="checkout__body">
+				<fieldset class="checkout__returning">
+					<div class="checkout__returning--icon">
+						<svg width="20" height="20" viewBox="0 0 512 512">
+							<use xlink:href="img/sprites.svg#user-2"></use>
+						</svg>
+					</div>
+					<div class="checkout__returning--text">
+						<ul>
+							<li>
+								<span class="gradient-text">Returning customer?</span>
+								<a href="#login-popup" class="gradient-text-2 open-popup">Click here to login</a>
+							</li>
+							<li>
+								<span class="gradient-text">Have a coupon?</span>
+								<a href="#" class="gradient-text-2">Click here to enter your code</a>
+							</li>
+						</ul>
+					</div>
+				</fieldset>
+				<fieldset class="checkout__col checkout__grid">
+					<legend class="checkout__legend section-title">
+						Billing details
+					</legend>
+					<label class="checkout__label form-label _min">
+						<span class="form-label__name">First name</span>
+						<input type="text" name="first-name" required class="form-label__input">
+					</label>
+					<label class="checkout__label form-label _min">
+						<span class="form-label__name">Last name</span>
+						<input type="text" name="last-name" required class="form-label__input">
+					</label>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Company name (optional)</span>
+						<input type="text" name="company-name" class="form-label__input">
+					</label>
+					<div class="checkout__label form-label">
+						<span class="form-label__name">Country / Region</span>
+						<div class="form-label__select select-wrapper">
+							<select name="country-or-region" class="select">
+								<option value="country-1" selected>India</option>
+								<option value="country-2">Lorem, ipsum dolor.</option>
+								<option value="country-3">Lorem, ipsum.</option>
+							</select>
+						</div>
+					</div>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Street address</span>
+						<input type="text" name="house-number-and-street-name" placeholder="House number and street name" required class="form-label__input">
+						<input type="text" name="apartament-suite-unit-etc" placeholder="Apartment, suite, unit, etc, (optional)" class="form-label__input">
+					</label>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Postcode / ZIP</span>
+						<input type="text" name="postcode-or-zip" class="form-label__input">
+					</label>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Town / City</span>
+						<input type="text" name="town-or-city" class="form-label__input">
+					</label>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Phone</span>
+						<input type="tel" name="phone" class="form-label__input">
+					</label>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Email address</span>
+						<input type="email" name="email" class="form-label__input">
+					</label>
+					<label class="checkout__label checkout__checkbox checkbox">
+						<span class="checkbox__text">
+							<span class="checkbox__box">
+								<input type="checkbox" name="create-account" class="checkbox__input">
+								<span class="checkbox__element">
+									<svg width="10" height="10" viewBox="0 0 512 512">
+										<use xlink:href="img/sprites.svg#check"></use>
+									</svg>
+								</span>
+							</span>
+							<span>Create an account?</span>
+						</span>
+					</label>
+				</fieldset>
+				<fieldset class="checkout__col checkout__grid">
+					<label class="checkout__label checkout__checkbox checkbox">
+						<span class="checkbox__text section-title _min">
+							<span class="checkbox__box">
+								<input type="checkbox" name="create-account" data-block-id="different-address" class="checkout__input checkbox__input">
+								<span class="checkbox__element">
+									<svg width="10" height="10" viewBox="0 0 512 512">
+										<use xlink:href="img/sprites.svg#check"></use>
+									</svg>
+								</span>
+							</span>
+							<span>Ship to a different address?</span>
+						</span>
+					</label>
+					<div class="checkbox-block checkout__grid" id="different-address">
+						<label class="checkout__label form-label _min">
+							<span class="form-label__name">First name</span>
+							<input type="text" name="first-name" required class="form-label__input">
+						</label>
+						<label class="checkout__label form-label _min">
+							<span class="form-label__name">Last name</span>
+							<input type="text" name="last-name" required class="form-label__input">
+						</label>
+						<label class="checkout__label form-label">
+							<span class="form-label__name">Company name (optional)</span>
+							<input type="text" name="company-name" class="form-label__input">
+						</label>
+						<div class="checkout__label form-label">
+							<span class="form-label__name">Country / Region</span>
+							<div class="form-label__select select-wrapper">
+								<select name="country-or-region" class="select">
+									<option value="country-1" selected>India</option>
+									<option value="country-2">Lorem, ipsum dolor.</option>
+									<option value="country-3">Lorem, ipsum.</option>
+								</select>
+							</div>
+						</div>
+						<label class="checkout__label form-label">
+							<span class="form-label__name">Street address</span>
+							<input type="text" name="house-number-and-street-name" placeholder="House number and street name" required class="form-label__input">
+							<input type="text" name="apartament-suite-unit-etc" placeholder="Apartment, suite, unit, etc, (optional)" class="form-label__input">
+						</label>
+						<label class="checkout__label form-label">
+							<span class="form-label__name">Postcode / ZIP</span>
+							<input type="text" name="postcode-or-zip" class="form-label__input">
+						</label>
+						<label class="checkout__label form-label">
+							<span class="form-label__name">Town / City</span>
+							<input type="text" name="town-or-city" class="form-label__input">
+						</label>
+					</div>
+					<label class="checkout__label form-label">
+						<span class="form-label__name">Order notes (optional)</span>
+						<textarea name="notes" rows="3" placeholder="Notes about your order, e.g. special notes for delivery." class="form-label__textarea"></textarea>
+					</label>
+				</fieldset>
+				<fieldset class="checkout__order">
+					<legend class="checkout__legend section-title">
+						Your order
+					</legend>
+					<div class="checkout__table">
+						<div class="checkout__table--head">
+							<b>Product</b>
+							<b class="hide-on-tablet">Subtotal</b>
+						</div>
+						@@loop("html/_checkout-product.html", [
+							{},
+							{},
+							{},
+						])
+						<div class="checkout__total">
+							<b><span>Subtotal:</span></b>
+							<b><span>€ 30</span></b>
+						</div>
+						<div class="checkout__total">
+							<b><span>Shipping:</span></b>
+							<b><span>€ 60</span></b>
+						</div>
+						<div class="checkout__total">
+							<b><span>Total:</span></b>
+							<b><span>€ 100</span></b>
+						</div>
+					</div>
+					<div class="checkout__footer">
+						<div class="checkout__min-row radio-wrapper">
+							<label class="checkout__radio radio">
+								<span class="radio__box">
+									<input type="radio" name="payment" value="bitcoin" class="radio__input radio-input">
+									<span class="radio__element"></span>
+								</span>
+								<span class="radio__text">
+									<span>Bitcoin</span>
+								</span>
+							</label>
+							<label class="checkout__radio radio">
+								<span class="radio__box">
+									<input type="radio" name="payment" value="direct-bank-transfer" data-block-id="direct-bank-transfer" class="radio__input radio-input">
+									<span class="radio__element"></span>
+								</span>
+								<span class="radio__text">
+									<span>Direct bank transfer</span>
+									<!-- <span>Direct bank(</span><mark class="gradient-text-2">transfer</mark><span>)</span> -->
+								</span>
+							</label>
+						</div>
+						<div class="checkout__note radio-block" id="direct-bank-transfer">
+							<span>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</spa>
+						</div>
+						<div class="checkout__privacy">
+							<span class="gradient-text">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our</span> <a href="#" class="link">privacy policy</a>
+						</div>
+						<label class="checkout__checkbox checkbox">
+							<span class="checkbox__box">
+								<input type="checkbox" name="terms" required checked class="checkbox__input">
+								<span class="checkbox__element">
+									<svg width="10" height="10" viewBox="0 0 512 512">
+										<use xlink:href="img/sprites.svg#check"></use>
+									</svg>
+								</span>
+							</span>
+							<span class="checkbox__text">
+								<span>
+									I have read and agree to the website
+								</span>
+								<a href="#" class="link">terms and conditions</a>
+							</span>
+						</label>
+						<button class="checkout__submit btn" type="button">
+							Place order
+						</button>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+	</main>
+
+	<div class="login popup _min" id="login-popup">
+		<div class="login__wrapper popup-wrapper">
+			<div class="login__bg popup-bg popup-close"></div>
+			<div class="login__body popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Close popup">
+					<svg width="15" height="15" viewBox="0 0 15 15">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="login__inner popup-inner">
+					<form action="#" class="popup-form">
+						<h2 class="popup-form__title section-title">
+							Login
+						</h2>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Username or email address</span>
+							<input type="text" name="username-or-address" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Password</span>
+							<input type="password" name="password" required class="form-label__input">
+						</label>
+						<label class="popup-form__checkbox checkbox">
+							<span class="checkbox__text">
+								<span class="checkbox__box">
+									<input type="checkbox" name="remember-me" class="checkbox__input">
+									<span class="checkbox__element">
+										<svg width="10" height="10" viewBox="0 0 512 512">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</span>
+								</span>
+								<span>Remember me</span>
+							</span>
+						</label>
+						<button class="popup-form__submit btn" type="submit">
+							Log in
+						</button>
+						<div class="popup-form__footer">
+							<a href="#" class="popup-form__link gradient-text-2">
+								Lost your password?
+							</a>
+							<a href="#register-popup" class="popup-form__link gradient-text-2 open-popup popup-close">
+								Register popup
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="register popup _min" id="register-popup">
+		<div class="register__wrapper popup-wrapper">
+			<div class="register__bg popup-bg popup-close"></div>
+			<div class="register__body popup-body">
+				<button type="button" class="popup-close-btn popup-close" title="Close popup">
+					<svg width="15" height="15" viewBox="0 0 15 15">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<div class="register__inner popup-inner">
+					<form action="#" class="popup-form">
+						<h2 class="popup-form__title section-title">
+							Register
+						</h2>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">First Name</span>
+							<input type="text" name="first-name" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Last Name</span>
+							<input type="text" name="last-name" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Country</span>
+							<input type="text" name="country" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Street, house number</span>
+							<input type="text" name="street-and-house-number" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">State / County / Region</span>
+							<input type="text" name="state-county-region" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">City</span>
+							<input type="text" name="city" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Postcode</span>
+							<input type="text" name="postcode" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Phone</span>
+							<input type="tel" name="phone" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">E-mail</span>
+							<input type="email" name="E-mail" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Password</span>
+							<input type="password" name="password" required class="form-label__input">
+						</label>
+						<label class="popup-form__label form-label">
+							<span class="form-label__name">Confirm Password</span>
+							<input type="password" name="confirm-password" required class="form-label__input">
+						</label>
+						<label class="popup-form__checkbox checkbox">
+							<span class="checkbox__text">
+								<span class="checkbox__box">
+									<input type="checkbox" name="remember-me" class="checkbox__input">
+									<span class="checkbox__element">
+										<svg width="10" height="10" viewBox="0 0 512 512">
+											<use xlink:href="img/sprites.svg#check"></use>
+										</svg>
+									</span>
+								</span>
+								<span>Remember me</span>
+							</span>
+						</label>
+						<button class="popup-form__submit btn" type="submit">
+							Register
+						</button>
+						<div class="popup-form__footer">
+							<a href="#login-popup" class="popup-form__link gradient-text-2 open-popup popup-close">
+								Login
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+@@include("html/_footer.html")

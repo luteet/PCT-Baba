@@ -1,0 +1,260 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="shop container">
+			<button type="button" class="shop__aside-open" aria-label="Category">
+				<svg width="20" height="21" viewBox="0 0 20 21">
+					<use xlink:href="img/sprites.svg#settings"></use>
+				</svg>
+				<span class="gradient-text-2">Category</span>
+			</button>
+			<aside class="shop__aside">
+				<div class="shop__aside--body">
+					<div class="shop__aside--block">
+						<h3 class="gradient-text">
+							US domestic
+						</h3>
+						<ul>
+							<li>
+								<a href="#" aria-label="Discounted products">
+									<span>
+										Discounted products
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="current" aria-label="Fat burn & weight loss">
+									<span>Fat burn & weight loss</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">
+									<span>Heart health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Human growth hormone">
+									<span>Human growth hormone</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Sexual health">
+									<span>Sexual health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Skin health">
+									<span>Skin health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Vitamins">
+									<span>Vitamins</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Anabilic steroids">
+									<span>Anabilic steroids</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Pct & fertility">
+									<span>Pct & fertility</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Insulin">
+									<span>Insulin</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="shop__aside--block">
+						<h3 class="gradient-text">
+							US domestic
+						</h3>
+						<ul>
+							<li>
+								<a href="#" aria-label="Discounted products">
+									<span>
+										Discounted products
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="current" aria-label="Fat burn & weight loss">
+									<span>Fat burn & weight loss</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">
+									<span>Heart health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Human growth hormone">
+									<span>Human growth hormone</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Sexual health">
+									<span>Sexual health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Skin health">
+									<span>Skin health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Vitamins">
+									<span>Vitamins</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Anabilic steroids">
+									<span>Anabilic steroids</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Pct & fertility">
+									<span>Pct & fertility</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Insulin">
+									<span>Insulin</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="shop__aside--bg"></div>
+				<button type="button" class="shop__aside--close" title="Close category"></button>
+			</aside>
+			<div class="shop__main">
+				<div class="shop__header">
+					<h2 class="shop__title alt-section-title">
+						<span>
+							<svg width="30" height="30" viewBox="0 0 292 292">
+								<use xlink:href="img/sprites.svg#cardiogram"></use>
+							</svg>
+						</span>
+						<span class="gradient-text">
+							Fat burn & Weight loss
+						</span>
+					</h2>
+				</div>
+				<ul class="shop__list products-list">
+					@@loop("html/_product-card.html", [
+
+						{
+							"class": 'shop__card',
+						},
+						{
+							"class": 'shop__card',
+						},
+						{
+							"class": 'shop__card',
+						},
+
+						{
+							"class": 'shop__card',
+						},
+						{
+							"class": 'shop__card',
+						},
+						{
+							"class": 'shop__card',
+						},
+
+						{
+							"class": 'shop__card',
+						},
+						{
+							"class": 'shop__card',
+						},
+						{
+							"class": 'shop__card',
+						},
+
+					])
+				</ul>
+				<div class="shop__footer hide-on-tablet">
+					<div class="shop__pagination pagination">
+						<a href="#" class="pagination__arrow _disabled" title="Prev page">
+							<svg width="16" height="16" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#left-arrow"></use>
+							</svg>
+						</a>
+						<ul class="pagination__list">
+							<li>
+								<a href="#" aria-label="1" class="current">
+									<span>1</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="2">
+									<span>2</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="3">
+									<span>3</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="4">
+									<span>4</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="5">
+									<span>5</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="6">
+									<span>6</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="7">
+									<span>7</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="pagination__arrow" title="Next page">
+							<svg width="16" height="16" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#right-arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

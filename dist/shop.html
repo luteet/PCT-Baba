@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<svg viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+		<defs>
+			<linearGradient id="gray-gradient">
+				<stop stop-color="#939393"/>
+				<stop offset="0.484375" stop-color="#565656"/>
+				<stop offset="1" stop-color="#939393"/>
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="accent-gradient">
+				<stop stop-color="#99FBFF"/>
+				<stop offset="0.484375" stop-color="#00DAE3"/>
+				<stop offset="1" stop-color="#99FBFF"/>
+			</linearGradient>
+		</defs>
+	</svg>
+	<!-- <svg>
+		<clipPath id="play-icon" clipPathUnits="objectBoundingBox"><path d="M0.061,0.003 C0.032,0.011,0.015,0.027,0.005,0.054 C0,0.067,0,0.09,0,0.5 C0,0.909,0,0.933,0.005,0.945 C0.011,0.962,0.018,0.973,0.031,0.983 C0.061,1,0.117,1,0.172,0.981 C0.2,0.968,0.921,0.597,0.941,0.585 C0.984,0.559,1,0.522,0.999,0.486 C0.993,0.459,0.97,0.431,0.939,0.413 C0.907,0.395,0.182,0.022,0.164,0.015 C0.136,0.004,0.116,0,0.091,0 C0.079,0,0.066,0.001,0.061,0.003"></path></clipPath>
+	</svg> -->
+	<svg width="0" height="0">
+		<clipPath id="play-icon" clipPathUnits="objectBoundingBox"><path d="M0.061,0.003 C0.032,0.011,0.015,0.027,0.005,0.054 C0,0.067,0,0.09,0,0.5 C0,0.909,0,0.933,0.005,0.945 C0.011,0.962,0.018,0.973,0.031,0.983 C0.061,1,0.117,1,0.172,0.981 C0.2,0.968,0.921,0.597,0.941,0.585 C0.984,0.559,1,0.522,0.999,0.486 C0.993,0.459,0.97,0.431,0.939,0.413 C0.907,0.395,0.182,0.022,0.164,0.015 C0.136,0.004,0.116,0,0.091,0 C0.079,0,0.066,0.001,0.061,0.003"></path></clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<button class="header__burger" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<form action="#" class="header__search">
+				<div class="header__search--body">
+					<div class="header__search--bg"></div>
+					<div class="header__search--block">
+						<label class="header__search--label">
+							<input type="search" name="search" placeholder="Search products..." required class="header__search--input">
+						</label>
+						<button class="header__search--submit" type="submit" title="Search">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<button type="button" class="header__search--open" title="Open search popup">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#search"></use>
+					</svg>
+				</button>
+			</form>	
+			<a href="index.html" class="header__logo">
+				<picture>
+					<source srcset="img/logo.webp" type="image/webp">
+					<img src="img/logo.png" alt="Logo" width="68" height="72" loading="lazy" class="header__logo--img">
+				</picture>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="shop.html">
+								Shop
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html">
+								About us
+							</a>
+						</li>
+						<li>
+							<a href="contact-us.html">
+								Contact us
+							</a>
+						</li>
+						<li>
+							<a href="faq.html">
+								FAQ
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="header__account">
+				<a href="account.html" class="header__account--link header__icon-link" aria-label="Dimasik Pavlovich"> <!-- + ._current -->
+					<svg width="20" height="22" viewBox="0 0 20 22">
+						<use xlink:href="img/sprites.svg#user"></use>
+					</svg>
+					Dimasik Pavlovich
+				</a>
+			</div>
+			<div class="header__cart">
+				<a href="cart.html" class="header__cart--link header__icon-link" aria-label="CART"> <!-- + ._current -->
+					<svg width="20" height="22" viewBox="0 0 20 22">
+						<use xlink:href="img/sprites.svg#cart"></use>
+					</svg>
+					CART
+				</a>
+			</div>
+		</header>
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="shop container">
+			<button type="button" class="shop__aside-open" aria-label="Category">
+				<svg width="20" height="21" viewBox="0 0 20 21">
+					<use xlink:href="img/sprites.svg#settings"></use>
+				</svg>
+				<span class="gradient-text-2">Category</span>
+			</button>
+			<aside class="shop__aside">
+				<div class="shop__aside--body">
+					<div class="shop__aside--block">
+						<h3 class="gradient-text">
+							US domestic
+						</h3>
+						<ul>
+							<li>
+								<a href="#" aria-label="Discounted products">
+									<span>
+										Discounted products
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="current" aria-label="Fat burn & weight loss">
+									<span>Fat burn & weight loss</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">
+									<span>Heart health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Human growth hormone">
+									<span>Human growth hormone</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Sexual health">
+									<span>Sexual health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Skin health">
+									<span>Skin health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Vitamins">
+									<span>Vitamins</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Anabilic steroids">
+									<span>Anabilic steroids</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Pct & fertility">
+									<span>Pct & fertility</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Insulin">
+									<span>Insulin</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="shop__aside--block">
+						<h3 class="gradient-text">
+							US domestic
+						</h3>
+						<ul>
+							<li>
+								<a href="#" aria-label="Discounted products">
+									<span>
+										Discounted products
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="current" aria-label="Fat burn & weight loss">
+									<span>Fat burn & weight loss</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="">
+									<span>Heart health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Human growth hormone">
+									<span>Human growth hormone</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Sexual health">
+									<span>Sexual health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Skin health">
+									<span>Skin health</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Vitamins">
+									<span>Vitamins</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Anabilic steroids">
+									<span>Anabilic steroids</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Pct & fertility">
+									<span>Pct & fertility</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="Insulin">
+									<span>Insulin</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="shop__aside--bg"></div>
+				<button type="button" class="shop__aside--close" title="Close category"></button>
+			</aside>
+			<div class="shop__main">
+				<div class="shop__header">
+					<h2 class="shop__title alt-section-title">
+						<span>
+							<svg width="30" height="30" viewBox="0 0 292 292">
+								<use xlink:href="img/sprites.svg#cardiogram"></use>
+							</svg>
+						</span>
+						<span class="gradient-text">
+							Fat burn & Weight loss
+						</span>
+					</h2>
+				</div>
+				<ul class="shop__list products-list">
+					<li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li><li class="product-card shop__card">
+	<a href="product.html" class="product-card__image image-place">
+		<!-- <picture><source srcset="image" type="image/webp"><img src="image" alt="" width="259" height="151" loading="lazy"></picture>-->
+	</a>
+	<a href="product.html" class="product-card__name">
+		<h3 class="product-card__title gradient-text">
+			DULAGLUTIDE TRULICITY 1×1.5MG
+		</h3>
+	</a>
+	<b class="product-card__price gradient-text">
+		€ 10
+	</b>
+	<form action="#" class="product-card__footer">
+		<div class="product-card__amount product-amount">
+			<button class="product-card__amount--btn product-amount-btn _minus" type="button">-</button>
+			<input name="product-amount" type="tel" min="1" value="1" placeholder="0" class="product-card__amount--length product-amount-length">
+			<button class="product-card__amount--btn product-amount-btn _plus" type="button">+</button>
+		</div>
+		<button class="product-card__add btn" type="submit">
+			Add to cart
+		</button>
+	</form>
+</li>
+				</ul>
+				<div class="shop__footer hide-on-tablet">
+					<div class="shop__pagination pagination">
+						<a href="#" class="pagination__arrow _disabled" title="Prev page">
+							<svg width="16" height="16" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#left-arrow"></use>
+							</svg>
+						</a>
+						<ul class="pagination__list">
+							<li>
+								<a href="#" aria-label="1" class="current">
+									<span>1</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="2">
+									<span>2</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="3">
+									<span>3</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="4">
+									<span>4</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="5">
+									<span>5</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="6">
+									<span>6</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" aria-label="7">
+									<span>7</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#" class="pagination__arrow" title="Next page">
+							<svg width="16" height="16" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#right-arrow"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+		<footer class="footer container">
+			<div class="footer__logo">
+				<a href="index.html" class="footer__logo--link">
+					<picture>
+						<source srcset="img/logo.webp" type="image/webp">
+						<img src="img/logo.png" width="68" height="72" loading="lazy" alt="Logo" class="footer__logo--img">
+					</picture>
+				</a>
+				<div class="footer__logo--text">
+					<p>
+						Licensed Indian pharmacy backed by ouw own warehouse. 7+ years of experience of exporting medicine to more than 75 countries
+					</p>
+				</div>
+			</div>
+			<nav class="footer__nav">
+				<ul>
+					<li>
+						<a href="index.html">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="shop.html">
+							Shop
+						</a>
+					</li>
+					<li>
+						<a href="about-us.html">
+							About us
+						</a>
+					</li>
+					<li>
+						<a href="contact-us.html">
+							Contact us
+						</a>
+					</li>
+					<li>
+						<a href="faq.html">
+							FAQ
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<a href="#" class="footer__link" aria-label="info@pctbaba.com">
+				<svg width="22" height="16" viewBox="0 0 22 16">
+					<use xlink:href="img/sprites.svg#email"></use>
+				</svg>
+				<span class="gradient-text">info@pctbaba.com</span>
+			</a>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Telegram" style="--bg: linear-gradient(180deg, #3CB9FF 0%, #44A2D7 100%);">
+							<svg width="20" height="20" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#telegram"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__privacy">
+				<ul>
+					<li>
+						<a href="#">
+							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Terms and Conditions
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+	<svg viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+		<defs>
+			<linearGradient id="gray-gradient">
+				<stop stop-color="#939393"/>
+				<stop offset="0.484375" stop-color="#565656"/>
+				<stop offset="1" stop-color="#939393"/>
+			</linearGradient>
+		</defs>
+		<defs>
+			<linearGradient id="accent-gradient">
+				<stop stop-color="#99FBFF"/>
+				<stop offset="0.484375" stop-color="#00DAE3"/>
+				<stop offset="1" stop-color="#99FBFF"/>
+			</linearGradient>
+		</defs>
+	</svg>
+	<!-- <svg>
+		<clipPath id="play-icon" clipPathUnits="objectBoundingBox"><path d="M0.061,0.003 C0.032,0.011,0.015,0.027,0.005,0.054 C0,0.067,0,0.09,0,0.5 C0,0.909,0,0.933,0.005,0.945 C0.011,0.962,0.018,0.973,0.031,0.983 C0.061,1,0.117,1,0.172,0.981 C0.2,0.968,0.921,0.597,0.941,0.585 C0.984,0.559,1,0.522,0.999,0.486 C0.993,0.459,0.97,0.431,0.939,0.413 C0.907,0.395,0.182,0.022,0.164,0.015 C0.136,0.004,0.116,0,0.091,0 C0.079,0,0.066,0.001,0.061,0.003"></path></clipPath>
+	</svg> -->
+	<svg width="0" height="0">
+		<clipPath id="play-icon" clipPathUnits="objectBoundingBox"><path d="M0.061,0.003 C0.032,0.011,0.015,0.027,0.005,0.054 C0,0.067,0,0.09,0,0.5 C0,0.909,0,0.933,0.005,0.945 C0.011,0.962,0.018,0.973,0.031,0.983 C0.061,1,0.117,1,0.172,0.981 C0.2,0.968,0.921,0.597,0.941,0.585 C0.984,0.559,1,0.522,0.999,0.486 C0.993,0.459,0.97,0.431,0.939,0.413 C0.907,0.395,0.182,0.022,0.164,0.015 C0.136,0.004,0.116,0,0.091,0 C0.079,0,0.066,0.001,0.061,0.003"></path></clipPath>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<button class="header__burger" aria-label="Menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<form action="#" class="header__search">
+				<div class="header__search--body">
+					<div class="header__search--bg"></div>
+					<div class="header__search--block">
+						<label class="header__search--label">
+							<input type="search" name="search" placeholder="Search products..." required class="header__search--input">
+						</label>
+						<button class="header__search--submit" type="submit" title="Search">
+							<svg width="24" height="24" viewBox="0 0 24 24">
+								<use xlink:href="img/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<button type="button" class="header__search--open" title="Open search popup">
+					<svg width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="img/sprites.svg#search"></use>
+					</svg>
+				</button>
+			</form>	
+			<a href="index.html" class="header__logo">
+				<picture>
+					<source srcset="img/logo.webp" type="image/webp">
+					<img src="img/logo.png" alt="Logo" width="68" height="72" loading="lazy" class="header__logo--img">
+				</picture>
+			</a>
+			<nav class="header__nav">
+				<div class="header__nav--body">
+					<ul class="header__nav--list">
+						<li>
+							<a href="index.html">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="shop.html">
+								Shop
+							</a>
+						</li>
+						<li>
+							<a href="about-us.html">
+								About us
+							</a>
+						</li>
+						<li>
+							<a href="contact-us.html">
+								Contact us
+							</a>
+						</li>
+						<li>
+							<a href="faq.html">
+								FAQ
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="header__account">
+				<a href="account.html" class="header__account--link header__icon-link" aria-label="Dimasik Pavlovich"> <!-- + ._current -->
+					<svg width="20" height="22" viewBox="0 0 20 22">
+						<use xlink:href="img/sprites.svg#user"></use>
+					</svg>
+					Dimasik Pavlovich
+				</a>
+			</div>
+			<div class="header__cart">
+				<a href="cart.html" class="header__cart--link header__icon-link" aria-label="CART"> <!-- + ._current -->
+					<svg width="20" height="22" viewBox="0 0 20 22">
+						<use xlink:href="img/sprites.svg#cart"></use>
+					</svg>
+					CART
+				</a>
+			</div>
+		</header>
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="account container section-start section-end">
+			<div class="account__decor">
+				<picture>
+					<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+					<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="account__body">
+				<h2 class="account__title title hide-on-mob">
+					<span class="gradient-text">Shipping address</span>
+				</h2>
+				<div class="account__aside">
+    <h2 class="account__title title visible-on-mob">
+        <span class="gradient-text">Shipping address</span>
+    </h2>
+    <nav class="account__nav">
+        <ul>
+            <li>
+                <a href="account.html" aria-label="My account" class="current">
+                    <span>
+                        My account
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="account-order-history.html" aria-label="Order history">
+                    <span>
+                        Order history
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="account-shipping-address.html" aria-label="Shipping address">
+                    <span>
+                        Shipping address
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="account-settings.html" aria-label="Account setting">
+                    <span>
+                        Account setting
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="account-reviews.html" aria-label="My reviews">
+                    <span>
+                        My reviews
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+				<div class="account__main">
+					<form action="#" class="account__shipping-address account-shipping-address">
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								Your name*
+							</span>
+							<input type="text" name="first-name" required placeholder="First name" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<input type="text" name="last-name" required placeholder="Last name" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								Country*
+							</span>
+							<input type="text" name="country" required placeholder="Select country" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								State/Province*
+							</span>
+							<input type="text" name="state-or-province" required placeholder="State/Province" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								City*
+							</span>
+							<input type="text" name="city" required placeholder="City*" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								Address*
+							</span>
+							<input type="text" name="address" required placeholder="Address" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								Zip/Post code*
+							</span>
+							<input type="text" name="zip-or-postcode" required placeholder="Zip/Post code" class="form-label__input">
+						</label>
+						<label class="account-shipping-address__label form-label">
+							<span class="form-label__bold-name">
+								Telephone*
+							</span>
+							<input type="tel" name="telephone" required placeholder="Telephone" class="form-label__input">
+						</label>
+						<button class="account-shipping-address__submit btn" type="submit">
+							Save address
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+
+		<footer class="footer container">
+			<div class="footer__logo">
+				<a href="index.html" class="footer__logo--link">
+					<picture>
+						<source srcset="img/logo.webp" type="image/webp">
+						<img src="img/logo.png" width="68" height="72" loading="lazy" alt="Logo" class="footer__logo--img">
+					</picture>
+				</a>
+				<div class="footer__logo--text">
+					<p>
+						Licensed Indian pharmacy backed by ouw own warehouse. 7+ years of experience of exporting medicine to more than 75 countries
+					</p>
+				</div>
+			</div>
+			<nav class="footer__nav">
+				<ul>
+					<li>
+						<a href="index.html">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="shop.html">
+							Shop
+						</a>
+					</li>
+					<li>
+						<a href="about-us.html">
+							About us
+						</a>
+					</li>
+					<li>
+						<a href="contact-us.html">
+							Contact us
+						</a>
+					</li>
+					<li>
+						<a href="faq.html">
+							FAQ
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<a href="#" class="footer__link" aria-label="info@pctbaba.com">
+				<svg width="22" height="16" viewBox="0 0 22 16">
+					<use xlink:href="img/sprites.svg#email"></use>
+				</svg>
+				<span class="gradient-text">info@pctbaba.com</span>
+			</a>
+			<div class="footer__social">
+				<ul>
+					<li>
+						<a href="#" title="Telegram" style="--bg: linear-gradient(180deg, #3CB9FF 0%, #44A2D7 100%);">
+							<svg width="20" height="20" viewBox="0 0 512 512">
+								<use xlink:href="img/sprites.svg#telegram"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__privacy">
+				<ul>
+					<li>
+						<a href="#">
+							Privacy Policy
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Terms and Conditions
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="account container section-start section-end">
+			<div class="account__decor">
+				<picture>
+					<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+					<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="account__body">
+				<h2 class="account__title title hide-on-mob">
+					<span class="gradient-text">My account</span>
+				</h2>
+				@@include("html/_account-aside.html", {
+					"title": 'My account'
+				})
+				<div class="account__main">
+					<div class="account__info">
+						<div class="account__info--col">
+							<div class="account__info--block">
+								<h3 class="account__info--title gradient-text-2">
+									Personal details
+								</h3>
+								<div class="account__info--param">
+									<span class="gradient-text-3">Name:</span>
+									<span>Dimasik Pavlovich</span>
+								</div>
+								<div class="account__info--param">
+									<span class="gradient-text-3">Email:</span>
+									<span>dpavloviche@gmail.com</span>
+								</div>
+							</div>
+							<form action="#" class="account__info--btn-wrapper">
+								<button type="submit" class="account__info--btn red-btn">
+									Delete account
+								</button>
+							</form>
+							<form action="#" class="account__info--btn-wrapper">
+								<button type="submit" class="account__info--btn btn">
+									Log out
+								</button>
+							</form>
+						</div>
+						<div class="account__info--col">
+							<div class="account__info--block">
+								<h3 class="account__info--title gradient-text-2">
+									Shipping address
+								</h3>
+								<div class="account__info--param">
+									<span class="gradient-text-3">First name:</span>
+									<span>No</span>
+								</div>
+								<div class="account__info--param">
+									<span class="gradient-text-3">Last name:</span>
+									<span>No</span>
+								</div>
+								<div class="account__info--param">
+									<span class="gradient-text-3">Address:</span>
+									<span>No</span>
+								</div>
+								<div class="account__info--param">
+									<span class="gradient-text-3">City:</span>
+									<span>No</span>
+								</div>
+								<div class="account__info--param">
+									<span class="gradient-text-3">State/Province:</span>
+									<span>No</span>
+								</div>
+								<div class="account__info--param">
+									<span class="gradient-text-3">Zip/Post code:</span>
+									<span>No</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

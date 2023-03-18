@@ -1,0 +1,120 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="account container section-start section-end">
+			<div class="account__decor">
+				<picture>
+					<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+					<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+			<div class="account__body">
+				<h2 class="account__title title hide-on-mob">
+					<span class="gradient-text">My reviews</span>
+				</h2>
+				@@include("html/_account-aside.html", {
+					"title": 'My reviews'
+				})
+				<div class="account__main">
+					<div class="account__reviews account-reviews">
+						@@loop("html/_account-review-item.html", [
+							{},
+							{},
+							{},
+						])
+						<a href="#create-review-popup" class="account-reviews__add btn open-popup">
+							Add a review
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="create-review-popup popup" id="create-review-popup">
+		<div class="create-review-popup__wrapper popup-wrapper">
+			<div class="create-review-popup__bg popup-bg popup-close"></div>
+			<form action="#" class="create-review-popup__body popup-body">
+				<button type="button" class="create-review-popup__close-btn popup-close-btn popup-close" title="Close popup">
+					<svg width="15" height="15" viewBox="0 0 15 15">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h3 class="create-review-popup__title">
+					<span class="gradient-text">Create a review</spa>
+				</h3>
+				<label class="create-review-popup__label form-label">
+					<input type="text" name="name" placeholder="Name" required class="create-review-popup__input form-label__input">
+				</label>
+				<label class="create-review-popup__label form-label">
+					<textarea name="feedback" rows="7" placeholder="Feedback" class="create-review-popup__textarea form-label__textarea"></textarea>
+				</label>
+				<label class="create-review-popup__add-picture file-wrapper">
+					<svg width="17" height="17" viewBox="0 0 21 20">
+						<use xlink:href="img/sprites.svg#image"></use>
+					</svg>
+					<input type="file" name="picture" class="create-review-popup__add-picture--input file-input">
+					<b class="file-text gradient-text-2">Add picture</b>
+				</label>
+				<button class="create-review-popup__submit btn" type="submit">
+					Submit review
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="create-review-popup popup" id="edit-review-popup">
+		<div class="create-review-popup__wrapper popup-wrapper">
+			<div class="create-review-popup__bg popup-bg popup-close"></div>
+			<form action="#" class="create-review-popup__body popup-body">
+				<button type="button" class="create-review-popup__close-btn popup-close-btn popup-close" title="Close popup">
+					<svg width="15" height="15" viewBox="0 0 15 15">
+						<use xlink:href="img/sprites.svg#close"></use>
+					</svg>
+				</button>
+				<h3 class="create-review-popup__title">
+					<span class="gradient-text">Edit a review</spa>
+				</h3>
+				<label class="create-review-popup__label form-label">
+					<input type="text" name="name" placeholder="Name" value="Slava Ded" required class="create-review-popup__input form-label__input">
+				</label>
+				<label class="create-review-popup__label form-label">
+					<textarea name="feedback" rows="7" placeholder="Feedback" class="create-review-popup__textarea form-label__textarea">I ordered test cyp. No pip at all. One of the best UGLS i have ever tried. Looking to order my next cycle there. Probably gonna grab deca and primo. GTG</textarea>
+				</label>
+				<label class="create-review-popup__add-picture file-wrapper remove-picture" data-text="Add picture">
+					<svg width="17" height="17" viewBox="0 0 21 20">
+						<use xlink:href="img/sprites.svg#image"></use>
+					</svg>
+					<input type="file" name="picture" class="create-review-popup__add-picture--input file-input">
+					<b class="file-text gradient-text-2">Delete picture</b>
+				</label>
+				<button class="create-review-popup__submit btn" type="submit">
+					Submit review
+				</button>
+			</form>
+		</div>
+	</div>
+
+@@include("html/_footer.html")

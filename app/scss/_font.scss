@@ -1,0 +1,214 @@
+
+.main-title {
+	font-family: var(--title-font);
+	font-weight: 500;
+	line-height: 122%;
+
+	&._decor-icon {
+		& > span {
+			@include _768 {
+				display: flex;
+				align-items: center;
+			}
+	
+			& > span {
+				@include _768 {
+					flex: 1 1 auto;
+					position: relative;
+					overflow: hidden;
+					margin-right: 30px;
+
+					&::after {
+						content: '';
+						position: absolute;
+						top: 50%;
+						transform: translate(0,-50%);
+						margin-left: .5em;
+						width: 100%;
+						border-bottom: 1px dashed #E2E2E2;
+					}
+				}
+	
+				& > span {
+					background: var(--accent-gradient-2);
+					background-clip: text;
+					color: transparent;
+				}
+
+			}
+	
+			& svg {
+				fill: #E2E2E2;
+				display: none;
+				@include _768 {
+					display: block;
+				}
+			}
+			
+		}
+	}
+
+	&:not(._decor-icon) {
+		background: var(--accent-gradient-2);
+		background-clip: text;
+		color: transparent;
+	}
+
+	font-size: 3.125rem;
+	
+	& mark {
+		font-size: 2.5625rem;
+		line-height: 100%;
+		font-weight: 600;
+		display: inline-block;
+
+		background: var(--accent-gradient-3);
+		background-clip: text;
+		color: transparent;
+		
+	}
+
+	@include _550 {
+		font-size: 2.5rem;
+		& mark {
+			font-size: 3rem;
+		}
+	}
+
+	@include _992 {
+		font-size: 3.125rem;
+		& mark {
+			font-size: 4rem;
+		}
+	}
+}
+
+.title {
+	
+	font-family: var(--title-font);
+	font-weight: 700;
+	line-height: 150%;
+	font-size: 1.5rem;
+
+	background: var(--accent-gradient-2);
+	background-clip: text;
+	color: transparent;
+
+	&._large {
+		font-size: 1.75rem;
+		@include _550 {
+			font-size: 2rem;
+		}
+		
+		@include _992 {
+			font-size: 2.25rem;
+		}
+	}
+
+	display: inline-block;
+
+}
+
+.section-title {
+
+	font-family: var(--title-font);
+	display: inline-block;
+	background: var(--accent-gradient-2);
+	background-clip: text;
+	color: transparent;
+
+	font-weight: 500;
+	font-size: 2.125rem;
+	&._min {
+		font-size: 1.125rem;
+	}
+	line-height: 120%;
+	text-align: center;
+
+	@include _550 {
+		font-size: 2.25rem;
+		&._min {
+			font-size: 1.5rem;
+		}
+		text-align: left;
+	}
+	
+	@include _992 {
+		font-size: 2.5rem;
+		&._min {
+			font-size: 2.125rem;
+		}
+	}
+
+}
+
+.alt-section-title {
+	
+	max-width: 853px;
+
+	text-align: center;
+
+	@include _768 {
+		display: flex;
+		text-align: left;
+	}
+
+	& > span {
+		&:first-child {
+			display: none;
+
+			@include _768 {
+				flex: 1 1 auto;
+				max-width: 400px;
+				fill: #E2E2E2;
+	
+				display: flex;
+				align-items: center;
+	
+				&::after {
+					content: '';
+					flex: 1 1 auto; 
+					border-bottom: 1px dashed #E2E2E2;
+					margin: 0 15px;
+				}
+			}
+		}
+	}
+
+	font-weight: 500;
+	font-size: 2.125rem;
+	line-height: 120%;
+
+	@include _550 {
+		font-size: 2.25rem;
+	}
+	
+	@include _992 {
+		font-size: 2.5rem;
+	}
+
+}
+
+.gradient-text {
+	background: var(--accent-gradient-2);
+	background-clip: text;
+	color: transparent;
+}
+
+.gradient-text-2 {
+	background: var(--accent-gradient-3);
+	background-clip: text;
+	background-color: transparent;
+	color: transparent;
+}
+
+.gradient-text-3 {
+	background: linear-gradient(90deg, #575757 0%, #7E7E7E 48.44%, #343434 100%);
+	background-clip: text;
+	background-color: transparent;
+	color: transparent;
+}
+
+.txt-center {
+	text-align: center;
+}

@@ -1,0 +1,150 @@
+.popup {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+
+	padding: 10px;
+
+	z-index: 100;
+
+	opacity: 0;
+	visibility: hidden;
+	backdrop-filter: blur(5px);
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+
+	perspective: 400px;
+
+	&._transition-none {
+		transition: none;
+	}
+
+	&._transition-none &-body {
+		transition: none;
+	}
+
+	&._active._transition-none &-body {
+		transition: none;
+	}
+
+	will-change: opacity;
+
+	&._active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* &._active &-body {
+		transform: translate3d(0,0,0);
+		transition: transform .2s ease;
+	} */
+
+	&._blur {
+	}
+
+	&._min &-body {
+		max-width: 370px;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		min-height: 100%;
+		width: 100%;
+
+		z-index: 2;
+	}
+	&-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: black;
+
+		opacity: 0.7;
+	}
+	&-body {
+		margin: auto;
+		position: relative;
+		background: white;
+
+		max-width: 700px;
+		width: 100%;
+		max-height: calc(var(--height-screen, 100vh) - 30px);
+		overflow-y: auto;
+		&::-webkit-scrollbar {
+			width: 7px;
+			height: 7px;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background: var(--accent-active);
+		}
+
+		padding: 15px;
+		@media (min-width: 370px) {
+			padding: 35px;
+		}
+		border-radius: 14px;
+
+		z-index: 2;
+	}
+	&-inner {
+		width: 100%; //max-height: calc(var(--height-screen, 100vh) - 30px);
+	}
+	&-close-btn {
+		position: absolute;
+		right: 0; top: 0;
+		line-height: 100%;
+		width: 40px;
+		height: 40px;
+
+		& svg {
+			width: 50%;
+			fill: url(#gray-gradient);
+		}
+
+		background: transparent;
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+
+		&__title {
+			margin-bottom: 30px;
+			text-align: left !important;
+			align-self: self-start;
+		}
+
+		&__label,
+		&__checkbox,
+		&__radio {
+			margin-bottom: 25px;
+		}
+
+		&__submit {
+			margin-top: 15px;
+		}
+
+		&__footer {
+			margin-top: 25px;
+
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__link {
+			display: inline-block;
+			margin-top: 5px;
+			align-self: self-start;
+		}
+	}
+}

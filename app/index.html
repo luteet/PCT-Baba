@@ -1,0 +1,194 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="intro container section-padding-bottom">
+			<div class="intro__bg">
+				<div class="intro__bg--element">
+					<picture>
+						<source srcset="img/home/intro/decor-1.webp" type="image/webp">
+						<img src="img/home/intro/decor-1.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+				<div class="intro__bg--element">
+					<picture>
+						<source srcset="img/home/intro/decor-2.webp" type="image/webp">
+						<img src="img/home/intro/decor-2.png" alt="" width="0" height="0" loading="lazy">
+					</picture>
+				</div>
+			</div>
+			<div class="intro__info">
+				<h1 class="intro__title main-title _decor-icon">
+					<span>
+						<span>
+							<span>Your</span>
+						</span>
+						<svg width="30" height="30" viewBox="0 0 292 292">
+							<use xlink:href="img/sprites.svg#cardiogram"></use>
+						</svg>
+						<br>
+					</span>
+					<mark>Online Pharmacy</mark>
+				</h1>
+				<p class="intro__text">
+					PCTBaba is an online Pharmacy selling generic & branded medications for extremely affordable prices. Our licensed pharmacy from Maharashtra, India has over 6+ years of experience in exporting medications internationally, safely & discretely to your doorstep. We are also available locally within the USA. If you have any questions, feel free to hit us up through the live chat!
+				</p>
+				<a href="#" class="intro__btn btn">
+					SHOP NOW
+				</a>
+			</div>
+			<div class="intro__image">
+				<div class="intro__image--body">
+					<div class="intro__image--decor">
+						<picture>
+							<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+							<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+						</picture>
+					</div>
+					<picture>
+						<source srcset="img/home/intro/image.webp" type="image/webp">
+						<img src="img/home/intro/image.png" alt="" width="508" height="545" loading="lazy">
+					</picture>
+				</div>
+			</div>
+			<div class="intro__advantages">
+				<ul class="intro__advantages--list">
+					<li class="intro__advantages--item">
+						<div class="intro__advantages--icon">
+							<img src="img/home/intro/icon-1.svg" width="29" height="29" loading="lazy" alt="">
+						</div>
+						<span class="intro__advantages--text">
+							Licensed Indian Pharmacy
+						</span>
+					</li>
+					<li class="intro__advantages--item">
+						<div class="intro__advantages--icon">
+							<img src="img/home/intro/icon-2.svg" width="29" height="29" loading="lazy" alt="">
+						</div>
+						<span class="intro__advantages--text">
+							Wide Collection & Cheap Prices
+						</span>
+					</li>
+					<li class="intro__advantages--item">
+						<div class="intro__advantages--icon">
+							<img src="img/home/intro/icon-3.svg" width="29" height="29" loading="lazy" alt="">
+						</div>
+						<span class="intro__advantages--text">
+							Fast & Discreet Shipping
+						</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="products container section-padding">
+			<div class="products__header">
+				<h2 class="products__title section-title">
+					Discounted products
+				</h2>
+			</div>
+			<ul class="products__list products-list">
+				@@loop("html/_product-card.html", [
+					{
+						"class": 'products__card',
+					},
+					{
+						"class": 'products__card',
+					},
+					{
+						"class": 'products__card',
+					},
+					{
+						"class": 'products__card',
+					},
+				])
+			</ul>
+		</section>
+		<section class="products container section-padding">
+			<div class="products__header">
+				<h2 class="products__title section-title">
+					Most popular products
+				</h2>
+			</div>
+			<ul class="products__list products-list">
+				@@loop("html/_product-card.html", [
+					{
+						"class": 'products__card',
+					},
+					{
+						"class": 'products__card',
+					},
+					{
+						"class": 'products__card',
+					},
+					{
+						"class": 'products__card',
+					},
+				])
+			</ul>
+		</section>
+		<section class="reviews section-padding">
+			<div class="reviews__header container">
+				<h2 class="reviews__title section-title">
+					Reviews
+				</h2>
+			</div>
+			<div class="reviews__wrapper container">
+				<div class="reviews__slider swiper">
+					<div class="reviews__slider--wrapper swiper-wrapper">
+						@@loop("html/_slide.html", [
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+							{},
+						])
+					</div>
+				</div>
+				<div class="reviews__nav container">
+					<button class="reviews__btn swiper-button-prev" type="button">
+						<picture>
+							<source srcset="img/home/reviews/left-arrow.webp" type="image/webp">
+							<img src="img/home/reviews/left-arrow.png" alt="" width="26" height="26" loading="lazy">
+						</picture>
+					</button>
+					<div class="reviews__pagination swiper-pagination"></div>
+					<button class="reviews__btn swiper-button-next" type="button">
+						<picture>
+							<source srcset="img/home/reviews/right-arrow.webp" type="image/webp">
+							<img src="img/home/reviews/right-arrow.png" alt="" width="26" height="26" loading="lazy">
+						</picture>
+					</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

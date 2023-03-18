@@ -1,0 +1,91 @@
+@@include("html/_header.html")
+
+	<main class="main">
+		<div class="page-bg" data-aos="fade-in" data-aos-delay="300">
+			<picture>
+				<source srcset="img/page-bg/decor-1.webp" type="image/webp">
+				<img src="img/page-bg/decor-1.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-2.webp" type="image/webp">
+				<img src="img/page-bg/decor-2.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-3.webp" type="image/webp">
+				<img src="img/page-bg/decor-3.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-4.webp" type="image/webp">
+				<img src="img/page-bg/decor-4.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+			<picture>
+				<source srcset="img/page-bg/decor-5.webp" type="image/webp">
+				<img src="img/page-bg/decor-5.png" alt="" width="0" height="0" loading="lazy">
+			</picture>
+		</div>
+		<section class="contact-us container section-start">
+			<h2 class="contact-us__title section-title">
+				Contact us
+			</h2>
+			<div class="contact-us__block">
+				<h3 class="contact-us__block--title">
+					<span>
+						Send Us a Message
+					</span>
+				</h3>
+				<form action="#" class="contact-us__form">
+					<label class="contact-us__label">
+						<input type="text" name="name" required placeholder="Name" class="contact-us__input input">
+					</label>
+					<label class="contact-us__label">
+						<input type="email" name="email" required placeholder="Email" class="contact-us__input input">
+					</label>
+					<button class="contact-us__submit btn" type="submit">
+						<svg width="22" height="16" viewBox="0 0 22 16">
+							<use xlink:href="img/sprites.svg#email"></use>
+						</svg>
+						Submit
+					</button>
+					<label class="contact-us__label _full">
+						<textarea name="message" rows="5" required placeholder="Comment or Message" class="contact-us__textarea textarea"></textarea>
+					</label>
+				</form>
+				<div class="contact-us__info">
+					<ul class="contact-us__info--list">
+						<li class="contact-us__info--item">
+							<div class="contact-us__info--icon">
+								<svg width="22" height="16" viewBox="0 0 22 16">
+									<use xlink:href="img/sprites.svg#email"></use>
+								</svg>
+							</div>
+							<b class="contact-us__info--min-title gradient-text">Write us on email:</b>
+							<a href="mailto:info@herapharmaceuticals.com" class="contact-us__info--link">info@herapharmaceuticals.com</a>
+						</li>
+						<li class="contact-us__info--item">
+							<div class="contact-us__info--icon _social" style="--bg: linear-gradient(93.14deg, #56C2FF 0.08%, #0FA9FF 101.56%), #56C2FF;">
+								<svg width="24" height="24" viewBox="0 0 512 512">
+									<use xlink:href="img/sprites.svg#telegram"></use>
+								</svg>
+							</div>
+							<b class="contact-us__info--min-title gradient-text">Write us on telegram</b>
+							<a href="https://t.me/herapharmaceuticals" class="contact-us__info--link">T.me/herapharmaceuticals</a>
+						</li>
+					</ul>
+					<a href="#" class="contact-us__info--btn" style="--bg: linear-gradient(93.14deg, #56C2FF 0.08%, #0FA9FF 101.56%);">
+						<svg width="24" height="24" viewBox="0 0 512 512">
+							<use xlink:href="img/sprites.svg#telegram"></use>
+						</svg>
+						join telegram groupchat
+					</a>
+				</div>
+			</div>
+			<div class="contact-us__decor">
+				<picture>
+					<source srcset="img/home/intro/image-decor.webp" type="image/webp">
+					<img src="img/home/intro/image-decor.png" alt="" width="0" height="0" loading="lazy">
+				</picture>
+			</div>
+		</section>
+	</main>
+
+@@include("html/_footer.html")

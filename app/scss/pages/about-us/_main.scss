@@ -1,0 +1,170 @@
+@use 'sass:math';
+
+.about-us {
+
+	padding-top: 33px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	@include _768 {
+		justify-content: space-between;
+	}
+
+	position: relative;
+
+	// .about-us__bg
+
+	&__bg {
+
+		display: none;
+
+		@include _992 {
+			display: block;
+			user-select: none; pointer-events: none;
+
+			position: absolute;
+			left: 0; top: 0;
+			width: 100%; height: 100%;
+			z-index: -1;
+		}
+		
+		/* @media (min-width: #{$container}px) {
+			justify-content: space-between;
+		} */
+
+		// .about-us__bg--element
+
+		&--element {
+			@include _992 {
+				width: 250px;
+			}
+
+			position: absolute;
+			
+			&:nth-child(1) {
+				
+				left: calc(50% - #{math.div($container, 2) + 250}px); top: 0;
+				transform: scaleX(-1) translate(0,10%);
+
+				@media (min-width: #{$container + 250 + 250}px) {
+					left: 0;
+				}
+			}
+			&:nth-child(2) {
+				right: calc(50% - #{math.div($container, 2) + 250}px); top: 0;
+				@media (min-width: #{$container + 250 + 250}px) {
+					right: 0;
+				}
+				transform: scaleX(-1);
+				display: none;
+				@media (min-width: #{$container}px) {
+					display: block;
+				}
+			}
+			& img {
+				@include _992 {
+					width: 100%; height: auto;
+				}
+			}
+		}
+	}
+
+	// .about-us__info
+
+	&__info {
+		
+		text-align: center;
+		@include _768 {
+			flex: 0 1 48%;
+			padding-right: 30px;
+			text-align: left;
+		}
+		
+	}
+
+	// .about-us__title
+
+	&__title {
+		@include _768 {
+			max-width: 569px;
+		}
+	}
+
+	// .about-us__text
+
+	&__text {
+		padding-top: 20px;
+
+		@include _768 {
+			max-width: 539px;
+		}
+	}
+
+	// .about-us__btn
+
+	&__btn {
+		margin-top: 40px;
+		max-width: 207px;
+		min-width: min(100%, 207px);
+	}
+
+	// .about-us__image
+
+	&__image {
+
+		flex: 1 1 100%;
+		margin-top: 40px;
+		max-width: 400px;
+		@include _768 {
+			max-width: none;
+			flex: 0 1 51.75%;
+			margin-top: 0;
+		}
+		position: relative;
+
+		// .about-us__image--decor
+
+		&--decor {
+			display: none;
+
+			@include _768 {
+				user-select: none; pointer-events: none;
+
+				display: block;
+				position: absolute;
+				left: 0; top: 0;
+				width: 110%; height: 100%;
+				transform: translate3d(5%,20%,0) rotate(0deg);
+				z-index: -1;
+				& img {
+					position: absolute;
+					left: 0; top: 0;
+					width: 100%; height: auto;
+					z-index: -1;
+					filter: blur(7px);
+				}
+			}
+		}
+
+		// .about-us__image--body
+
+		&--body {
+			width: 100%; padding-top: 100%;
+			position: relative;
+
+			& img {
+				position: absolute;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+@import "our-credo";
+@import "why";
+@import "services";
+@import "advantages";
