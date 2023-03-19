@@ -23,6 +23,25 @@
 			padding: 0;
 		}
 
+		&._alt &--head {
+			@include _992 {
+				grid-template-columns: minmax(auto, 25%) minmax(auto, 25%) minmax(auto, 25%) auto;
+			}
+			@media (min-width: 1100px) {
+				grid-template-columns: minmax(auto, 20%) minmax(auto, 25%) minmax(auto, 25%) auto;
+			}
+		}
+
+		&._alt &--item {
+			grid-template-columns: 1fr 1fr;
+			@include _992 {
+				grid-template-columns: minmax(auto, 25%) minmax(auto, 25%) minmax(auto, 25%) auto;
+			}
+			@media (min-width: 1100px) {
+				grid-template-columns: minmax(auto, 20%) minmax(auto, 25%) minmax(auto, 25%) auto;
+			}
+		}
+
 		// .account-order-history__table--head
 
 		&--head {
@@ -111,6 +130,62 @@
 				@include _992 {
 					display: none;
 				}
+			}
+		}
+	}
+
+	&__total {
+		margin-top: 10px;
+		
+		display: grid;
+		grid-template-columns: 100%;
+
+		@include _768 {
+			grid-template-columns: 200px auto;
+			background: #F7F8FA;
+			box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+			border-radius: 8px;
+			padding: 5px 15px;
+		}
+
+		@include _992 {
+			padding: 10px 15px;
+		}
+		@media (min-width: 1100px) {
+			padding: 10px 20px 10px 30px;
+		}
+		
+
+		font-size: 0.875rem;
+
+		& > * {
+			align-self: center;
+		}
+
+		&--aside {
+			background: #F7F8FA;
+			box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+			border-radius: 8px;
+			padding: 20px 30px;
+			@include _768 {
+				background: transparent;
+				box-shadow: none;
+				padding: 0;
+			}
+			& span {
+				margin-right: 15px;
+			}
+			& mark {
+				font-size: 1.25rem;
+			}
+		}
+
+		&--btn {
+			width: 100%;
+
+			margin-top: 23px;
+			@include _768 {
+				margin-top: 0;
 			}
 		}
 	}
