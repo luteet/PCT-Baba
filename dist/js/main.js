@@ -495,7 +495,6 @@ let reviewsSlider = new Swiper('.reviews__slider', {
 	spaceBetween: 20,
 	slidesPerView: 1,
 	speed: 500,
-	//centeredSlides: false,
 	loop: true,
 	pagination: {
 		el: '.reviews__nav .swiper-pagination',
@@ -541,6 +540,7 @@ refreshFsLightbox();
 
 AOS.init({
 	disable: "mobile",
+	once: true,
 });
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </animation> -=-=-=-=-=-=-=-=-=-=-=-=
