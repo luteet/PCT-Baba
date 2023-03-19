@@ -235,12 +235,14 @@ body.addEventListener('click', function (event) {
 	if (headerSearchOpen) {
 		const headerSearch = headerSearchOpen.closest('.header__search');
 		headerSearch.classList.add('_active');
+		body.classList.add('_active')
 	}
 
 	const headerSearchBg = $('.header__search--bg');
 	if (headerSearchBg) {
 		const headerSearch = headerSearchBg.closest('.header__search');
 		headerSearch.classList.remove('_active');
+		body.classList.remove('_active')
 	}
 
 	// =-=-=-=-=-=-=-=-=-=- </header search> -=-=-=-=-=-=-=-=-=-=-
