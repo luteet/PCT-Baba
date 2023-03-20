@@ -16,12 +16,20 @@
 
 	&__logo {
 
+		flex: 1 1 100%;
+
+		@include _768 {
+			flex: 0 1 auto;
+			
+		}
+
 		@include _992 {
 			flex: 0 1 32%;
 		}
 
 		display: flex;
 		align-items: center;
+		justify-content: center;
 
 		// .footer__logo--link
 
@@ -38,6 +46,10 @@
 
 		&--text {
 			font-size: 0.875rem;
+			display: none;
+			@include _768 {
+				display: block;
+			}
 		}
 	}
 

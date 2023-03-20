@@ -1165,10 +1165,6 @@ summary {
     box-sizing: content-box
 }
 
-*,.ss-content,.ss-content .ss-search input,.ss-main,.swiper-lazy-preloader,:after,:before {
-    box-sizing: border-box
-}
-
 .swiper-android .swiper-slide,.swiper-wrapper {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0)
@@ -1193,16 +1189,16 @@ summary {
     display: block
 }
 
+.ss-content,.swiper-autoheight,.swiper-autoheight .swiper-slide {
+    height: auto
+}
+
 .swiper-button-lock,.swiper-pagination-lock {
     display: none
 }
 
 .swiper-slide-invisible-blank {
     visibility: hidden
-}
-
-.swiper-autoheight,.swiper-autoheight .swiper-slide {
-    height: auto
 }
 
 .swiper-autoheight .swiper-wrapper {
@@ -1337,6 +1333,7 @@ summary {
     z-index: 10;
     -webkit-transform-origin: 50%;
     transform-origin: 50%;
+    box-sizing: border-box;
     border: 4px solid;
     border-radius: 50%;
     border-top-color: transparent
@@ -1396,12 +1393,6 @@ summary {
 .swiper-virtual.swiper-css-mode.swiper-horizontal .swiper-wrapper::after {
     height: 1px;
     width: var(--swiper-virtual-size)
-}
-
-.checkbox__input,.radio__input {
-    width: 1px;
-    left: 50%;
-    position: absolute
 }
 
 .swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after {
@@ -1821,6 +1812,10 @@ button.swiper-pagination-bullet {
     filter: blur(50px)
 }
 
+.ss-content,.ss-content .ss-search input,.ss-main {
+    background-color: var(--ss-bg-color)
+}
+
 .swiper-flip .swiper-slide {
     pointer-events: none;
     -webkit-backface-visibility: hidden;
@@ -1932,8 +1927,8 @@ button.swiper-pagination-bullet {
     cursor: pointer;
     border: 1px solid var(--ss-border-color);
     border-radius: var(--ss-border-radius);
-    background-color: var(--ss-bg-color);
     outline: 0;
+    box-sizing: border-box;
     transition: background-color var(--ss-animation-timing);
     overflow: hidden
 }
@@ -1957,11 +1952,6 @@ button.swiper-pagination-bullet {
     border-bottom-right-radius: 0
 }
 
-.ss-main .ss-values .ss-max,.ss-main .ss-values .ss-value {
-    background-color: var(--ss-primary-color);
-    border-radius: var(--ss-border-radius)
-}
-
 .ss-main .ss-values {
     display: inline-flex;
     flex-wrap: wrap;
@@ -1982,12 +1972,6 @@ button.swiper-pagination-bullet {
     white-space: nowrap
 }
 
-.ss-main .ss-values .ss-max,.ss-main .ss-values .ss-value .ss-value-text {
-    color: var(--ss-bg-color);
-    line-height: 1;
-    padding: var(--ss-spacing-s) var(--ss-spacing-m)
-}
-
 .ss-main .ss-values .ss-max {
     display: flex;
     -webkit-user-select: none;
@@ -1997,10 +1981,15 @@ button.swiper-pagination-bullet {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 12px
+    font-size: 12px;
+    color: var(--ss-bg-color);
+    line-height: 1;
+    padding: var(--ss-spacing-s) var(--ss-spacing-m);
+    background-color: var(--ss-primary-color);
+    border-radius: var(--ss-border-radius)
 }
 
-.faq__item,.services__item--icon,.ss-content .ss-list .ss-option {
+.faq__item,.ss-content .ss-list .ss-option,.ss-main .ss-values .ss-value {
     -ms-user-select: none;
     -webkit-user-select: none
 }
@@ -2012,13 +2001,13 @@ button.swiper-pagination-bullet {
 
 .ss-main .ss-values .ss-value {
     display: flex;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     align-items: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    background-color: var(--ss-primary-color);
+    border-radius: var(--ss-border-radius);
     -webkit-animation-name: ss-valueIn;
     animation-name: ss-valueIn;
     -webkit-animation-duration: var(--ss-animation-timing);
@@ -2044,7 +2033,10 @@ button.swiper-pagination-bullet {
 }
 
 .ss-main .ss-values .ss-value .ss-value-text {
-    font-size: 12px
+    font-size: 12px;
+    color: var(--ss-bg-color);
+    line-height: 1;
+    padding: var(--ss-spacing-s) var(--ss-spacing-m)
 }
 
 .ss-main .ss-values .ss-value .ss-value-delete {
@@ -2056,9 +2048,8 @@ button.swiper-pagination-bullet {
     box-sizing: content-box
 }
 
-.ss-content,.ss-content .ss-search input {
-    border: 1px solid var(--ss-border-color);
-    background-color: var(--ss-bg-color)
+*,.ss-content,.ss-content .ss-search input,:after,:before {
+    box-sizing: border-box
 }
 
 .ss-main .ss-values .ss-value .ss-value-delete svg path {
@@ -2115,10 +2106,10 @@ button.swiper-pagination-bullet {
 .ss-content {
     position: absolute;
     display: flex;
-    height: auto;
     flex-direction: column;
     width: auto;
     max-height: var(--ss-content-height);
+    border: 1px solid var(--ss-border-color);
     transition: opacity var(--ss-animation-timing),-webkit-transform var(--ss-animation-timing);
     transition: transform var(--ss-animation-timing),opacity var(--ss-animation-timing);
     transition: transform var(--ss-animation-timing),opacity var(--ss-animation-timing),-webkit-transform var(--ss-animation-timing);
@@ -2176,6 +2167,7 @@ button.swiper-pagination-bullet {
     min-width: 0;
     padding: var(--ss-spacing-m) var(--ss-spacing-l);
     margin: 0;
+    border: 1px solid var(--ss-border-color);
     border-radius: var(--ss-border-radius);
     outline: 0;
     text-align: left
@@ -2416,6 +2408,10 @@ button,input,textarea {
     font-family: inherit
 }
 
+.account-settings,.account-shipping-address__label,body {
+    font-family: var(--main-font)
+}
+
 input::-ms-clear {
     display: none
 }
@@ -2506,15 +2502,15 @@ body,html {
     min-height: 100%
 }
 
-.red-btn,body {
-    line-height: 150%
-}
-
 body {
-    font-family: var(--main-font);
     font-weight: 400;
+    line-height: 150%;
     display: flex;
     flex-direction: column
+}
+
+.account,.red-btn {
+    font-family: Poppins
 }
 
 ::selection {
@@ -2598,8 +2594,11 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    left: 0;
-    border-radius: 8px;
+    border-radius: 8px
+}
+
+.btn::after,.btn::before,.pagination__list li a.current::before {
+    z-index: -1;
     content: ""
 }
 
@@ -2609,14 +2608,14 @@ section {
 }
 
 .btn::before {
-    background: var(--accent-active);
-    z-index: -1
+    left: 0;
+    background: var(--accent-active)
 }
 
 .btn::after {
+    left: 0;
     background: var(--accent-gradient-3);
-    transition: opacity .3s ease;
-    z-index: -1
+    transition: opacity .3s ease
 }
 
 .btn:hover {
@@ -2634,9 +2633,9 @@ section {
 .red-btn {
     background: rgba(255,73,73,.1);
     border-radius: 8px;
-    font-family: Poppins;
     font-weight: 500;
     font-size: .875rem;
+    line-height: 150%;
     text-align: center;
     color: #ff3939;
     padding: 15px 15px 14px;
@@ -2789,18 +2788,16 @@ section {
 }
 
 .pagination__list li a.current::before {
-    content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     border-radius: 8px;
-    background: var(--accent-gradient-2);
-    z-index: -1
+    background: var(--accent-gradient-2)
 }
 
-.checkbox__box,.image-place,.radio__box,.radio__element,.select .ss-values {
+.image-place,.radio__box,.select .ss-values {
     position: relative
 }
 
@@ -2848,11 +2845,6 @@ section {
     display: none
 }
 
-.main-title mark,.section-title,.title {
-    display: inline-block;
-    color: transparent
-}
-
 .main-title:not(._decor-icon) {
     background: var(--accent-gradient-2);
     -webkit-background-clip: text;
@@ -2864,17 +2856,24 @@ section {
     font-size: 2.5625rem;
     line-height: 100%;
     font-weight: 600;
+    display: inline-block;
     background: var(--accent-gradient-3);
     -webkit-background-clip: text;
-    background-clip: text
+    background-clip: text;
+    color: transparent
+}
+
+.section-title,.title {
+    font-family: var(--title-font);
+    display: inline-block;
+    background: var(--accent-gradient-2);
+    color: transparent
 }
 
 .title {
-    font-family: var(--title-font);
     font-weight: 700;
     line-height: 150%;
     font-size: 1.5rem;
-    background: var(--accent-gradient-2);
     -webkit-background-clip: text;
     background-clip: text
 }
@@ -2890,8 +2889,6 @@ section {
 }
 
 .section-title {
-    font-family: var(--title-font);
-    background: var(--accent-gradient-2);
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 2.125rem
@@ -3047,10 +3044,6 @@ section {
     padding: 10px!important
 }
 
-.checkbox__box,.radio__box,.shop__aside-open svg {
-    margin-right: 10px
-}
-
 .ss-content .ss-list .ss-option.ss-highlighted,.ss-content .ss-list .ss-option:hover,.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
     background: rgba(153,252,255,.3);
     color: var(--black-2)
@@ -3083,13 +3076,6 @@ section {
     font-size: .875rem;
     line-height: 100%;
     transition: color .2s ease
-}
-
-.checkbox__input,.radio__input {
-    padding: 0;
-    -webkit-clip-path: inset(100%);
-    overflow: hidden;
-    top: 50%
 }
 
 .form-label__input::-webkit-input-placeholder,.form-label__textarea::-webkit-input-placeholder {
@@ -3129,6 +3115,11 @@ section {
     transition: opacity .3s ease
 }
 
+.checkbox__element svg,.checkbox__element::before,.radio__element::before {
+    opacity: 0;
+    transition: opacity .3s ease
+}
+
 .form-label__input:focus,.form-label__textarea:focus {
     color: var(--black)
 }
@@ -3163,16 +3154,27 @@ section {
     display: inline-block;
     width: 22px;
     height: 22px;
+    margin-right: 10px;
     margin-bottom: -5px
 }
 
+.checkbox__input,.radio__input {
+    height: 1px;
+    padding: 0;
+    overflow: hidden
+}
+
 .radio__input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    height: 1px;
+    width: 1px;
     margin: -1px;
     border: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
     clip: rect(0 0 0 0)
 }
@@ -3184,12 +3186,8 @@ section {
     border-radius: 50%;
     background: #f1f1f1;
     border: 1px solid #f1f1f1;
+    position: relative;
     transition: border-color .3s ease
-}
-
-.checkbox__element svg,.checkbox__element::before,.radio__element::before {
-    transition: opacity .3s ease;
-    opacity: 0
 }
 
 .radio__element::before {
@@ -3228,19 +3226,25 @@ section {
 
 .checkbox__box {
     cursor: pointer;
+    position: relative;
     display: inline-block;
     width: 22px;
     height: 22px;
-    flex: 0 0 22px
+    flex: 0 0 22px;
+    margin-right: 10px
 }
 
 .checkbox__input {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    height: 1px;
+    width: 1px;
     margin: -1px;
     border: 0;
     white-space: nowrap;
+    -webkit-clip-path: inset(100%);
     clip-path: inset(100%);
     clip: rect(0 0 0 0)
 }
@@ -3258,6 +3262,10 @@ section {
     border-radius: 4px;
     fill: var(--white);
     position: relative
+}
+
+.checkout__returning--icon svg,.header__search--submit svg,.popup-close-btn svg {
+    fill: url(#gray-gradient)
 }
 
 .checkbox__element::before {
@@ -3387,8 +3395,7 @@ section {
 }
 
 .popup-close-btn svg {
-    width: 50%;
-    fill: url(#gray-gradient)
+    width: 50%
 }
 
 .popup-form__title {
@@ -3508,16 +3515,19 @@ section {
     visibility: visible
 }
 
+.header__nav,.header__search--body {
+    visibility: hidden;
+    left: 0;
+    width: 100%
+}
+
 .header__search--body {
     position: fixed;
-    left: 0;
     top: 0;
-    width: 100%;
     height: var(--height-screen,100vh);
     z-index: 15;
     padding: 50px 30px;
     opacity: 0;
-    visibility: hidden;
     transition: opacity .3s ease,visibility .3s ease
 }
 
@@ -3621,10 +3631,6 @@ section {
     background: #ebebeb
 }
 
-.header__search--submit svg {
-    fill: url(#gray-gradient)
-}
-
 .header__icon-link svg,.header__search--open svg,.shop__aside-open svg {
     fill: url(#accent-gradient)
 }
@@ -3667,14 +3673,11 @@ section {
 
 .header__nav {
     position: absolute;
-    left: 0;
     top: 0;
-    width: 100%;
     background: var(--white);
     overflow-y: auto;
     overflow-x: hidden;
     opacity: 0;
-    visibility: hidden;
     transition: opacity .3s ease,visibility .3s ease
 }
 
@@ -3764,6 +3767,11 @@ section {
     color: #fff
 }
 
+.intro__advantages--icon,.intro__advantages--item,.product-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07)
+}
+
 .header__icon-link._current,.header__icon-link:hover {
     background-position-x: 0
 }
@@ -3781,6 +3789,7 @@ section {
 }
 
 .intro__info {
+    margin-top: 40px;
     width: 100%;
     text-align: center
 }
@@ -3797,7 +3806,6 @@ section {
 }
 
 .intro__image {
-    margin-top: 40px;
     width: 100%;
     max-width: 600px
 }
@@ -3834,9 +3842,7 @@ section {
 .intro__advantages--item {
     padding: 20px;
     background: rgba(255,255,255,.75);
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     backdrop-filter: blur(7.5px);
-    border-radius: 8px;
     display: flex;
     align-items: center
 }
@@ -3847,8 +3853,6 @@ section {
     width: 48px;
     height: 48px;
     background: #fff;
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center
@@ -3884,15 +3888,12 @@ section {
 .product-card {
     padding: 15px;
     background: rgba(255,255,255,.63);
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    border-radius: 8px
+    backdrop-filter: blur(5px)
 }
 
 .our-credo__body,.reviews__card {
-    -webkit-backdrop-filter: blur(5px);
-    text-align: center
+    -webkit-backdrop-filter: blur(5px)
 }
 
 .product-card__image {
@@ -3971,7 +3972,8 @@ section {
     box-shadow: 0 4px 14px rgba(0,0,0,.07);
     backdrop-filter: blur(5px);
     border-radius: 8px;
-    padding: 25px 25px 0
+    padding: 25px 25px 0;
+    text-align: center
 }
 
 .reviews__card--name {
@@ -4067,6 +4069,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center
+}
+
+.shop__aside-open svg {
+    margin-right: 10px
 }
 
 .shop__aside {
@@ -4313,6 +4319,10 @@ section {
     position: relative
 }
 
+.account__aside,.contact-us__block {
+    -webkit-backdrop-filter: blur(7.5px)
+}
+
 .faq__item._active .faq__item--content {
     display: block
 }
@@ -4334,11 +4344,6 @@ section {
     border-radius: 5px;
     background: var(--accent-gradient-3);
     transition: opacity .3s ease
-}
-
-.account__aside,.contact-us__block {
-    background: rgba(255,255,255,.75);
-    -webkit-backdrop-filter: blur(7.5px)
 }
 
 .faq__item--name::before {
@@ -4377,6 +4382,7 @@ section {
 .contact-us__block {
     margin-top: 30px;
     padding: 15px;
+    background: rgba(255,255,255,.75);
     box-shadow: 0 4px 14px rgba(0,0,0,.07);
     backdrop-filter: blur(7.5px);
     border-radius: 8px
@@ -4887,10 +4893,6 @@ section {
     margin-top: 2px
 }
 
-.checkout__returning--icon svg {
-    fill: url(#gray-gradient)
-}
-
 .account-reviews__item--edit svg,.create-review-popup__add-picture svg,.footer__link svg,.order__copy--btn svg {
     fill: url(#accent-gradient)
 }
@@ -5044,10 +5046,6 @@ section {
     margin-top: 45px
 }
 
-.account {
-    font-family: Poppins
-}
-
 .account__decor {
     display: none
 }
@@ -5067,6 +5065,7 @@ section {
 }
 
 .account__aside {
+    background: rgba(255,255,255,.75);
     backdrop-filter: blur(7.5px);
     padding: 30px 0
 }
@@ -5147,6 +5146,11 @@ section {
 
 .account__info--title {
     margin-bottom: 10px
+}
+
+.account-order-history__total>*,.services__list {
+    -ms-grid-row-align: center;
+    align-self: center
 }
 
 .account__info--param {
@@ -5249,11 +5253,6 @@ section {
     grid-template-columns: 100%
 }
 
-.account-order-history__total>* {
-    -ms-grid-row-align: center;
-    align-self: center
-}
-
 .account-order-history__total--aside {
     background: #f7f8fa;
     border-radius: 8px;
@@ -5279,8 +5278,7 @@ section {
 
 .account-shipping-address__label {
     -ms-grid-row-align: self-end;
-    align-self: self-end;
-    font-family: var(--main-font)
+    align-self: self-end
 }
 
 .account-shipping-address__label:not(:first-child) .form-label__bold-name {
@@ -5295,16 +5293,15 @@ section {
 .account-settings {
     display: grid;
     gap: 60px 0;
-    margin-top: 20px;
-    font-family: var(--main-font)
+    margin-top: 20px
 }
 
 .account-reviews,.account-settings__block {
     display: -ms-grid;
-    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 14px rgba(0,0,0,.07)
+    background: #fff;
+    padding: 15px
 }
 
 .account-reviews,.create-review-popup {
@@ -5545,6 +5542,12 @@ section {
     background: rgba(153,251,255,.31)
 }
 
+.our-credo__body,.why__content {
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07)
+}
+
 .order__copy--text {
     -ms-grid-column-span: 2;
     grid-column: 2 span;
@@ -5634,9 +5637,7 @@ section {
 
 .our-credo__body {
     background: rgba(255,255,255,.63);
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     backdrop-filter: blur(5px);
-    border-radius: 8px;
     padding: 0 15px 30px;
     display: -ms-grid;
     display: grid
@@ -5698,13 +5699,10 @@ section {
 
 .why__content {
     background: rgba(255,255,255,.8);
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     margin-top: -25px;
-    padding: 30px 15px;
-    text-align: center;
-    border-radius: 8px
+    padding: 30px 15px
 }
 
 .services__title,.why__title {
@@ -5728,8 +5726,6 @@ section {
 }
 
 .services__list {
-    -ms-grid-row-align: center;
-    align-self: center;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
@@ -5778,11 +5774,6 @@ section {
     padding: 20px
 }
 
-.advantages__item,.advantages__item--icon {
-    background: #fff;
-    box-shadow: 0 4px 14px rgba(0,0,0,.07)
-}
-
 .services__item--icon {
     position: absolute;
     left: 0;
@@ -5792,6 +5783,8 @@ section {
     overflow: hidden;
     border-radius: 8px;
     z-index: -1;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none
 }
 
@@ -5850,6 +5843,8 @@ section {
 }
 
 .advantages__item {
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     border-radius: 8px;
     padding: 20px;
     display: flex;
@@ -5863,6 +5858,8 @@ section {
     width: 48px;
     height: 48px;
     flex: 0 0 48px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     border-radius: 8px
 }
 
@@ -5883,8 +5880,10 @@ section {
 }
 
 .footer__logo {
+    flex: 1 1 100%;
     display: flex;
-    align-items: center
+    align-items: center;
+    justify-content: center
 }
 
 .footer__logo--link {
@@ -5893,7 +5892,8 @@ section {
 }
 
 .footer__logo--text {
-    font-size: .875rem
+    font-size: .875rem;
+    display: none
 }
 
 .footer__nav {
@@ -6221,6 +6221,12 @@ section {
 }
 
 @media (min-width:768px) {
+    .about-us__image--decor,.about-us__image--decor img,.intro__image--decor,.intro__image--decor img {
+        z-index: -1;
+        position: absolute;
+        top: 0
+    }
+
     .about-us__info,.alt-section-title,.intro__info,.product__title,.why__content {
         text-align: left
     }
@@ -6252,13 +6258,6 @@ section {
         border-bottom: 1px dashed #e2e2e2
     }
 
-    .about-us__image--decor,.about-us__image--decor img,.intro__image--decor,.intro__image--decor img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1
-    }
-
     .main-title._decor-icon>span svg {
         display: block
     }
@@ -6288,6 +6287,7 @@ section {
         user-select: none;
         pointer-events: none;
         display: block;
+        left: 0;
         width: 130%;
         height: 100%;
         -webkit-transform: translate3d(0,30%,0);
@@ -6295,6 +6295,7 @@ section {
     }
 
     .intro__image--decor img {
+        left: 0;
         width: 100%;
         height: auto;
         -webkit-filter: blur(7px);
@@ -6326,12 +6327,12 @@ section {
         gap: 30px
     }
 
-    .product__info {
-        padding-top: 0
+    .about-us__image--decor,.footer__logo--text,.product__info-list li {
+        display: block
     }
 
-    .product__info-list li {
-        display: block
+    .product__info {
+        padding-top: 0
     }
 
     .contact-us__form {
@@ -6486,7 +6487,7 @@ section {
         -ms-user-select: none;
         user-select: none;
         pointer-events: none;
-        display: block;
+        left: 0;
         width: 110%;
         height: 100%;
         -webkit-transform: translate3d(5%,20%,0) rotate(0);
@@ -6494,6 +6495,7 @@ section {
     }
 
     .about-us__image--decor img {
+        left: 0;
         width: 100%;
         height: auto;
         -webkit-filter: blur(7px);
@@ -6507,6 +6509,10 @@ section {
     .advantages__list {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr
+    }
+
+    .footer__logo {
+        flex: 0 1 auto
     }
 }
 
@@ -6743,12 +6749,18 @@ section {
     }
 
     .intro__info {
-        flex: 0 1 50%
+        flex: 0 1 50%;
+        order: 2;
+        margin-top: 0
     }
 
     .intro__image {
-        margin-top: 0;
-        flex: 0 1 50%
+        flex: 0 1 50%;
+        order: 3
+    }
+
+    .intro__advantages {
+        order: 4
     }
 
     .reviews__slider {

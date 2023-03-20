@@ -52,6 +52,7 @@
 	// .intro__info
 
 	&__info {
+		margin-top: 40px;
 		width: 100%;
 		text-align: center;
 		@include _768 {
@@ -59,6 +60,8 @@
 		}
 		@include _992 {
 			flex: 0 1 50%;
+			order: 2;
+			margin-top: 0;
 		}
 	}
 
@@ -80,18 +83,17 @@
 	// .intro__image
 
 	&__image {
-		margin-top: 40px;
+		
 		width: 100%;
 		max-width: 600px;
 		@include _992 {
-			margin-top: 0;
 			flex: 0 1 50%;
+			order: 3;
 		}
 
 		&--body {
 			width: 100%; position: relative;
 			padding-top: 107.283465%;
-			
 		}
 
 		// .intro__image--decor
@@ -132,6 +134,10 @@
 
 		flex: 1 1 100%;
 		padding-top: 45px;
+
+		@include _992 {
+			order: 4;
+		}
 
 		// .intro__advantages--list
 
