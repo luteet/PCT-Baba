@@ -149,18 +149,28 @@
 	// .create-review-popup__label
 
 	&__label {
-		margin-top: 5px;
+		margin-top: 10px;
 		display: flex;
+
+		background: var(--light-gray);
+		border-radius: 8px;
 	}
 
 	// .create-review-popup__input
 
 	&__input {
+		background: var(--accent-gradient-2-alt);
+		background-clip: text;
+		color: transparent;
+		margin-top: 0;
 	}
 
 	// .create-review-popup__textarea
 
 	&__textarea {
+		background: var(--accent-gradient-2-alt);
+		background-clip: text;
+		color: transparent;
 	}
 
 	// .create-review-popup__add-picture

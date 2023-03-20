@@ -10,6 +10,8 @@
 
 	&__title {
 		text-align: center;
+		color: #828282;
+		background: transparent;
 		@include _992 {
 			grid-column: 2 span;
 		}

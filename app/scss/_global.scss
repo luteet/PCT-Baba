@@ -140,7 +140,7 @@ section {
 	padding-right: var(--container-padding);
 
 	&:not(._min), &:not(._large) {
-		@media (min-width: #{$container}px) {
+		@media (min-width: #{$containerMin}px) {
 			padding-left: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 			padding-right: max(var(--container-padding), calc(50% - #{math.div($container, 2)}px));
 		}
@@ -154,7 +154,7 @@ section {
 	}
 
 	&._large {
-		@media (min-width: #{$container}px) {
+		@media (min-width: #{$containerMin}px) {
 			padding-left: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
 			padding-right: max(var(--container-padding), calc(50% - #{math.div($containerLarge, 2)}px));
 		}

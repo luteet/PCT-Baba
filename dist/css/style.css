@@ -11,6 +11,14 @@ progress,sub,sup {
     padding: 0
 }
 
+.header__burger span,[data-aos][data-aos][data-aos-duration="300"],body[data-aos-duration="300"] [data-aos] {
+    transition-duration: .3s
+}
+
+.header__burger span,[data-aos][data-aos][data-aos-easing=ease],body[data-aos-easing=ease] [data-aos] {
+    transition-timing-function: ease
+}
+
 body {
     margin: 0
 }
@@ -184,10 +192,6 @@ summary {
 
 [data-aos][data-aos][data-aos-delay="250"].aos-animate,body[data-aos-delay="250"] [data-aos].aos-animate {
     transition-delay: .25s
-}
-
-[data-aos][data-aos][data-aos-duration="300"],body[data-aos-duration="300"] [data-aos] {
-    transition-duration: .3s
 }
 
 [data-aos][data-aos][data-aos-delay="300"],body[data-aos-delay="300"] [data-aos] {
@@ -850,10 +854,6 @@ summary {
     transition-timing-function: cubic-bezier(.25,.25,.75,.75)
 }
 
-[data-aos][data-aos][data-aos-easing=ease],body[data-aos-easing=ease] [data-aos] {
-    transition-timing-function: ease
-}
-
 [data-aos][data-aos][data-aos-easing=ease-in],body[data-aos-easing=ease-in] [data-aos] {
     transition-timing-function: ease-in
 }
@@ -1398,6 +1398,12 @@ summary {
     width: var(--swiper-virtual-size)
 }
 
+.checkbox__input,.radio__input {
+    width: 1px;
+    left: 50%;
+    position: absolute
+}
+
 .swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after {
     width: 1px;
     height: var(--swiper-virtual-size)
@@ -1652,15 +1658,15 @@ button.swiper-pagination-bullet {
     top: 0
 }
 
+.ss-hide,.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled {
+    display: none!important
+}
+
 .swiper-scrollbar {
     border-radius: var(--swiper-scrollbar-border-radius,10px);
     position: relative;
     -ms-touch-action: none;
     background: var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))
-}
-
-.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled {
-    display: none!important
 }
 
 .swiper-horizontal>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -1849,15 +1855,12 @@ button.swiper-pagination-bullet {
     overflow: visible
 }
 
-.main,.ss-content,.ss-main,.ss-main .ss-values .ss-placeholder,.swiper-cards .swiper-slide,body._active,body._popup-active,body._scroll-lock {
-    overflow: hidden
-}
-
 .swiper-cards .swiper-slide {
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden
+    backface-visibility: hidden;
+    overflow: hidden
 }
 
 @-webkit-keyframes ss-valueIn {
@@ -1916,10 +1919,6 @@ button.swiper-pagination-bullet {
     }
 }
 
-.ss-hide {
-    display: none!important
-}
-
 .ss-main {
     display: flex;
     flex-direction: row;
@@ -1935,7 +1934,8 @@ button.swiper-pagination-bullet {
     border-radius: var(--ss-border-radius);
     background-color: var(--ss-bg-color);
     outline: 0;
-    transition: background-color var(--ss-animation-timing)
+    transition: background-color var(--ss-animation-timing);
+    overflow: hidden
 }
 
 .ss-main.ss-disabled {
@@ -1958,8 +1958,8 @@ button.swiper-pagination-bullet {
 }
 
 .ss-main .ss-values .ss-max,.ss-main .ss-values .ss-value {
-    border-radius: var(--ss-border-radius);
-    -ms-user-select: none
+    background-color: var(--ss-primary-color);
+    border-radius: var(--ss-border-radius)
 }
 
 .ss-main .ss-values {
@@ -1977,12 +1977,12 @@ button.swiper-pagination-bullet {
     align-items: center;
     width: 100%;
     color: var(--ss-font-placeholder-color);
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
 .ss-main .ss-values .ss-max,.ss-main .ss-values .ss-value .ss-value-text {
-    font-size: 12px;
     color: var(--ss-bg-color);
     line-height: 1;
     padding: var(--ss-spacing-s) var(--ss-spacing-m)
@@ -1991,12 +1991,18 @@ button.swiper-pagination-bullet {
 .ss-main .ss-values .ss-max {
     display: flex;
     -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     align-items: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    background-color: var(--ss-primary-color)
+    font-size: 12px
+}
+
+.faq__item,.services__item--icon,.ss-content .ss-list .ss-option {
+    -ms-user-select: none;
+    -webkit-user-select: none
 }
 
 .ss-main .ss-values .ss-single {
@@ -2007,12 +2013,12 @@ button.swiper-pagination-bullet {
 .ss-main .ss-values .ss-value {
     display: flex;
     -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     align-items: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    background-color: var(--ss-primary-color);
     -webkit-animation-name: ss-valueIn;
     animation-name: ss-valueIn;
     -webkit-animation-duration: var(--ss-animation-timing);
@@ -2037,6 +2043,10 @@ button.swiper-pagination-bullet {
     animation-timing-function: ease-out
 }
 
+.ss-main .ss-values .ss-value .ss-value-text {
+    font-size: 12px
+}
+
 .ss-main .ss-values .ss-value .ss-value-delete {
     display: flex;
     align-items: center;
@@ -2044,6 +2054,11 @@ button.swiper-pagination-bullet {
     cursor: pointer;
     border-left: solid 1px var(--ss-bg-color);
     box-sizing: content-box
+}
+
+.ss-content,.ss-content .ss-search input {
+    border: 1px solid var(--ss-border-color);
+    background-color: var(--ss-bg-color)
 }
 
 .ss-main .ss-values .ss-value .ss-value-delete svg path {
@@ -2104,8 +2119,6 @@ button.swiper-pagination-bullet {
     flex-direction: column;
     width: auto;
     max-height: var(--ss-content-height);
-    border: 1px solid var(--ss-border-color);
-    background-color: var(--ss-bg-color);
     transition: opacity var(--ss-animation-timing),-webkit-transform var(--ss-animation-timing);
     transition: transform var(--ss-animation-timing),opacity var(--ss-animation-timing);
     transition: transform var(--ss-animation-timing),opacity var(--ss-animation-timing),-webkit-transform var(--ss-animation-timing);
@@ -2114,6 +2127,7 @@ button.swiper-pagination-bullet {
     transform: scaleY(0);
     -webkit-transform-origin: center top;
     transform-origin: center top;
+    overflow: hidden;
     z-index: 10000
 }
 
@@ -2162,9 +2176,7 @@ button.swiper-pagination-bullet {
     min-width: 0;
     padding: var(--ss-spacing-m) var(--ss-spacing-l);
     margin: 0;
-    border: 1px solid var(--ss-border-color);
     border-radius: var(--ss-border-radius);
-    background-color: var(--ss-bg-color);
     outline: 0;
     text-align: left
 }
@@ -2224,6 +2236,10 @@ button.swiper-pagination-bullet {
     height: auto;
     overflow-x: hidden;
     overflow-y: auto
+}
+
+.main,body._active,body._popup-active,body._scroll-lock {
+    overflow: hidden
 }
 
 .ss-content .ss-list .ss-error {
@@ -2344,8 +2360,6 @@ button.swiper-pagination-bullet {
     padding: var(--ss-spacing-m) var(--ss-spacing-l);
     color: var(--ss-font-color);
     cursor: pointer;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -2581,11 +2595,12 @@ section {
 
 .btn::after,.btn::before {
     position: absolute;
-    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    border-radius: 8px
+    left: 0;
+    border-radius: 8px;
+    content: ""
 }
 
 .btn svg {
@@ -2594,17 +2609,12 @@ section {
 }
 
 .btn::before {
-    content: "";
     background: var(--accent-active);
     z-index: -1
 }
 
-.btn::after,.swiper-pagination .swiper-pagination-bullet::after {
-    background: var(--accent-gradient-3);
-    content: ""
-}
-
 .btn::after {
+    background: var(--accent-gradient-3);
     transition: opacity .3s ease;
     z-index: -1
 }
@@ -2675,12 +2685,14 @@ section {
 }
 
 .swiper-pagination .swiper-pagination-bullet::after {
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    background: var(--accent-gradient-3);
     opacity: 0;
     transition: opacity .3s ease
 }
@@ -2738,10 +2750,6 @@ section {
     padding: 4px
 }
 
-.section-start,.shop {
-    padding-top: 100px
-}
-
 .pagination__list li a {
     display: flex;
     align-items: center;
@@ -2796,6 +2804,10 @@ section {
     position: relative
 }
 
+.section-start {
+    padding-top: 100px
+}
+
 .section-end {
     padding-bottom: 100px
 }
@@ -2836,6 +2848,11 @@ section {
     display: none
 }
 
+.main-title mark,.section-title,.title {
+    display: inline-block;
+    color: transparent
+}
+
 .main-title:not(._decor-icon) {
     background: var(--accent-gradient-2);
     -webkit-background-clip: text;
@@ -2847,24 +2864,17 @@ section {
     font-size: 2.5625rem;
     line-height: 100%;
     font-weight: 600;
-    display: inline-block;
     background: var(--accent-gradient-3);
     -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent
-}
-
-.section-title,.title {
-    font-family: var(--title-font);
-    display: inline-block;
-    background: var(--accent-gradient-2);
-    color: transparent
+    background-clip: text
 }
 
 .title {
+    font-family: var(--title-font);
     font-weight: 700;
     line-height: 150%;
     font-size: 1.5rem;
+    background: var(--accent-gradient-2);
     -webkit-background-clip: text;
     background-clip: text
 }
@@ -2880,6 +2890,8 @@ section {
 }
 
 .section-title {
+    font-family: var(--title-font);
+    background: var(--accent-gradient-2);
     -webkit-background-clip: text;
     background-clip: text;
     font-size: 2.125rem
@@ -3035,6 +3047,10 @@ section {
     padding: 10px!important
 }
 
+.checkbox__box,.radio__box,.shop__aside-open svg {
+    margin-right: 10px
+}
+
 .ss-content .ss-list .ss-option.ss-highlighted,.ss-content .ss-list .ss-option:hover,.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
     background: rgba(153,252,255,.3);
     color: var(--black-2)
@@ -3072,8 +3088,8 @@ section {
 .checkbox__input,.radio__input {
     padding: 0;
     -webkit-clip-path: inset(100%);
-    white-space: nowrap;
-    overflow: hidden
+    overflow: hidden;
+    top: 50%
 }
 
 .form-label__input::-webkit-input-placeholder,.form-label__textarea::-webkit-input-placeholder {
@@ -3147,20 +3163,16 @@ section {
     display: inline-block;
     width: 22px;
     height: 22px;
-    margin-right: 10px;
     margin-bottom: -5px
 }
 
 .radio__input {
-    position: absolute;
-    left: 50%;
-    top: 50%;
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
+    white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0)
 }
@@ -3192,11 +3204,6 @@ section {
     background: var(--accent-gradient-3)
 }
 
-.checkbox__input,.header__burger::before {
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%)
-}
-
 .radio__input:checked+.radio__element {
     border-color: var(--accent-active)
 }
@@ -3224,20 +3231,23 @@ section {
     display: inline-block;
     width: 22px;
     height: 22px;
-    flex: 0 0 22px;
-    margin-right: 10px
+    flex: 0 0 22px
 }
 
 .checkbox__input {
-    position: absolute;
-    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    width: 1px;
     height: 1px;
     margin: -1px;
     border: 0;
+    white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0)
+}
+
+.checkbox__element,.checkbox__element::before,.popup,.popup-bg {
+    height: 100%;
+    width: 100%
 }
 
 .checkbox__element {
@@ -3246,22 +3256,15 @@ section {
     justify-content: center;
     background: #f1f1f1;
     border-radius: 4px;
-    width: 100%;
-    height: 100%;
     fill: var(--white);
     position: relative
 }
 
-.checkbox__element::before,.popup-bg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0
-}
-
 .checkbox__element::before {
     content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
     background: var(--accent-gradient-3);
     border-radius: 4px
 }
@@ -3295,8 +3298,6 @@ section {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -3337,6 +3338,9 @@ section {
 }
 
 .popup-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
     background: #000;
     opacity: .7
 }
@@ -3354,18 +3358,22 @@ section {
     z-index: 2
 }
 
+.header__account,.header__burger,.header__logo {
+    margin-right: 20px
+}
+
 .popup-body::-webkit-scrollbar {
     width: 7px;
     height: 7px
 }
 
-.header,.popup-inner {
-    width: 100%
-}
-
 .popup-body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: var(--accent-active)
+}
+
+.popup-inner {
+    width: 100%
 }
 
 .popup-close-btn {
@@ -3415,6 +3423,7 @@ section {
     position: sticky;
     left: 0;
     top: 0;
+    width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
     background: var(--white);
@@ -3428,7 +3437,6 @@ section {
     position: relative;
     width: 27px;
     height: 20px;
-    margin-right: 20px;
     background: rgba(0,0,0,0);
     z-index: 10;
     cursor: pointer;
@@ -3438,9 +3446,11 @@ section {
 .header__burger::before {
     content: "";
     position: absolute;
+    left: 50%;
     top: 50%;
     width: 150%;
     height: 150%;
+    -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%)
 }
 
@@ -3451,8 +3461,6 @@ section {
     height: 2px;
     background: var(--accent-gradient);
     background-size: 250%;
-    transition-duration: .3s;
-    transition-timing-function: ease;
     transition-property: top,opacity,visibility,-webkit-transform;
     transition-property: transform,top,opacity,visibility;
     transition-property: transform,top,opacity,visibility,-webkit-transform
@@ -3523,6 +3531,10 @@ section {
     opacity: .7;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px)
+}
+
+.faq__item,.intro__advantages--item,.shop__aside--bg {
+    -webkit-backdrop-filter: blur(7.5px)
 }
 
 .header__search--block {
@@ -3642,7 +3654,6 @@ section {
     flex: 1 1 auto;
     display: block;
     text-align: center;
-    margin-right: 20px;
     position: relative;
     z-index: 2
 }
@@ -3719,10 +3730,6 @@ section {
     background-position-x: 0
 }
 
-.header__account {
-    margin-right: 20px
-}
-
 .header__icon-link {
     display: inline-flex;
     align-items: center;
@@ -3755,11 +3762,6 @@ section {
     line-height: 150%;
     text-align: center;
     color: #fff
-}
-
-.intro__advantages--icon,.intro__advantages--item,.product-card {
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(0,0,0,.07)
 }
 
 .header__icon-link._current,.header__icon-link:hover {
@@ -3832,8 +3834,9 @@ section {
 .intro__advantages--item {
     padding: 20px;
     background: rgba(255,255,255,.75);
-    -webkit-backdrop-filter: blur(7.5px);
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     backdrop-filter: blur(7.5px);
+    border-radius: 8px;
     display: flex;
     align-items: center
 }
@@ -3844,6 +3847,8 @@ section {
     width: 48px;
     height: 48px;
     background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center
@@ -3879,8 +3884,15 @@ section {
 .product-card {
     padding: 15px;
     background: rgba(255,255,255,.63);
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
+    border-radius: 8px
+}
+
+.our-credo__body,.reviews__card {
+    -webkit-backdrop-filter: blur(5px);
+    text-align: center
 }
 
 .product-card__image {
@@ -3957,11 +3969,9 @@ section {
 .reviews__card {
     background: rgba(255,255,255,.63);
     box-shadow: 0 4px 14px rgba(0,0,0,.07);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 8px;
-    padding: 25px 25px 0;
-    text-align: center
+    padding: 25px 25px 0
 }
 
 .reviews__card--name {
@@ -4024,6 +4034,10 @@ section {
     background: var(--light-gray)
 }
 
+.about-us__btn,.about-us__image,.shop__aside--block:not(:first-child) {
+    margin-top: 40px
+}
+
 .reviews__btn::after {
     display: none
 }
@@ -4041,7 +4055,8 @@ section {
 }
 
 .shop {
-    position: static
+    position: static;
+    padding-top: 100px
 }
 
 .shop__aside-open {
@@ -4052,10 +4067,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center
-}
-
-.shop__aside-open svg {
-    margin-right: 10px
 }
 
 .shop__aside {
@@ -4080,7 +4091,6 @@ section {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.7);
-    -webkit-backdrop-filter: blur(7.5px);
     backdrop-filter: blur(7.5px)
 }
 
@@ -4103,8 +4113,8 @@ section {
 }
 
 .faq__item,.shop__aside--body {
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
-    border-radius: 8px
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07)
 }
 
 .shop__aside--close::before {
@@ -4134,10 +4144,6 @@ section {
 .footer__nav ul li a,.shop__aside--block ul li a span {
     background: var(--accent-gradient);
     transition: background-position-x .3s ease
-}
-
-.shop__aside--block:not(:first-child) {
-    margin-top: 40px
 }
 
 .shop__aside--block h3 {
@@ -4300,19 +4306,11 @@ section {
 
 .faq__item {
     cursor: pointer;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     padding: 15px;
     background: rgba(255,255,255,.75);
-    -webkit-backdrop-filter: blur(7.5px);
     backdrop-filter: blur(7.5px);
     position: relative
-}
-
-.account__aside,.contact-us__block {
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
-    -webkit-backdrop-filter: blur(7.5px)
 }
 
 .faq__item._active .faq__item--content {
@@ -4321,7 +4319,9 @@ section {
 
 .faq__item--name {
     position: relative;
-    padding-right: 50px
+    padding-right: 50px;
+    font-weight: 500;
+    font-size: 1.125rem
 }
 
 .faq__item--name::after,.faq__item--name::before {
@@ -4334,6 +4334,11 @@ section {
     border-radius: 5px;
     background: var(--accent-gradient-3);
     transition: opacity .3s ease
+}
+
+.account__aside,.contact-us__block {
+    background: rgba(255,255,255,.75);
+    -webkit-backdrop-filter: blur(7.5px)
 }
 
 .faq__item--name::before {
@@ -4372,7 +4377,7 @@ section {
 .contact-us__block {
     margin-top: 30px;
     padding: 15px;
-    background: rgba(255,255,255,.75);
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     backdrop-filter: blur(7.5px);
     border-radius: 8px
 }
@@ -4411,10 +4416,47 @@ section {
     width: 100%
 }
 
+.contact-us__input::-webkit-input-placeholder {
+    color: #767676
+}
+
+.contact-us__input:-ms-input-placeholder {
+    color: #767676
+}
+
+.contact-us__input::-ms-input-placeholder {
+    color: #767676
+}
+
+.contact-us__input::placeholder {
+    color: #767676
+}
+
 .contact-us__submit {
     font-weight: 500;
+    font-size: .875rem;
     -ms-grid-row: 5;
     grid-row: 5
+}
+
+.contact-us__textarea {
+    min-height: 100px
+}
+
+.contact-us__textarea::-webkit-input-placeholder {
+    color: #767676
+}
+
+.contact-us__textarea:-ms-input-placeholder {
+    color: #767676
+}
+
+.contact-us__textarea::-ms-input-placeholder {
+    color: #767676
+}
+
+.contact-us__textarea::placeholder {
+    color: #767676
 }
 
 .contact-us__info {
@@ -4490,7 +4532,7 @@ section {
     fill: var(--white)
 }
 
-.account-reviews__item--edit svg,.cart__product--remove svg,.cart__refresh--btn svg,.create-review-popup__add-picture svg,.footer__link svg,.order__copy--btn svg {
+.cart__product--remove svg,.cart__refresh--btn svg {
     fill: url(#accent-gradient)
 }
 
@@ -4672,11 +4714,6 @@ section {
     align-self: center
 }
 
-.account__aside,.account__info--title,.checkout__col {
-    -ms-grid-row-align: self-start;
-    align-self: self-start
-}
-
 .cart__promo--label {
     padding-bottom: 20px;
     display: flex;
@@ -4738,6 +4775,11 @@ section {
     margin-top: 100px;
     background: #f7f8fa;
     box-shadow: 0 2px 5px rgba(38,51,77,.03);
+    border-radius: 8px
+}
+
+.account__aside,.checkout__body {
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
     border-radius: 8px
 }
 
@@ -4818,13 +4860,16 @@ section {
 
 .checkout__body {
     background: #fff;
-    box-shadow: 0 4px 14px rgba(0,0,0,.07);
-    border-radius: 8px;
     display: -ms-grid;
     display: grid;
     gap: 70px 0;
     padding: 15px;
     margin-top: 60px
+}
+
+.checkout__col {
+    -ms-grid-row-align: self-start;
+    align-self: self-start
 }
 
 .checkout__grid {
@@ -4844,6 +4889,10 @@ section {
 
 .checkout__returning--icon svg {
     fill: url(#gray-gradient)
+}
+
+.account-reviews__item--edit svg,.create-review-popup__add-picture svg,.footer__link svg,.order__copy--btn svg {
+    fill: url(#accent-gradient)
 }
 
 .checkout__returning ul {
@@ -4894,6 +4943,11 @@ section {
 .checkout__product>* {
     -ms-grid-row-align: center;
     align-self: center
+}
+
+.account__aside,.account__info--title {
+    -ms-grid-row-align: self-start;
+    align-self: self-start
 }
 
 .checkout__product--info {
@@ -5013,9 +5067,7 @@ section {
 }
 
 .account__aside {
-    background: rgba(255,255,255,.75);
     backdrop-filter: blur(7.5px);
-    border-radius: 8px;
     padding: 30px 0
 }
 
@@ -5097,11 +5149,6 @@ section {
     margin-bottom: 10px
 }
 
-.account-order-history__total>*,.services__list {
-    -ms-grid-row-align: center;
-    align-self: center
-}
-
 .account__info--param {
     padding-top: 10px;
     font-size: .875rem;
@@ -5131,6 +5178,10 @@ section {
     padding: 15px
 }
 
+.account-order-history__item,.account-order-history__total--aside,.account-reviews__item,.order__copy--label {
+    box-shadow: 0 2px 5px rgba(38,51,77,.03)
+}
+
 .account-order-history__table._alt .account-order-history__table--item {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr
@@ -5151,7 +5202,6 @@ section {
 .account-order-history__item {
     padding: 5px 30px 5px 5px;
     background: #f7f8fa;
-    box-shadow: 0 2px 5px rgba(38,51,77,.03);
     border-radius: 8px
 }
 
@@ -5199,9 +5249,13 @@ section {
     grid-template-columns: 100%
 }
 
+.account-order-history__total>* {
+    -ms-grid-row-align: center;
+    align-self: center
+}
+
 .account-order-history__total--aside {
     background: #f7f8fa;
-    box-shadow: 0 2px 5px rgba(38,51,77,.03);
     border-radius: 8px;
     padding: 20px 30px
 }
@@ -5247,9 +5301,9 @@ section {
 
 .account-reviews,.account-settings__block {
     display: -ms-grid;
-    padding: 15px;
-    border-radius: 15px;
     background: #fff;
+    border-radius: 15px;
+    padding: 15px;
     box-shadow: 0 4px 14px rgba(0,0,0,.07)
 }
 
@@ -5280,7 +5334,6 @@ section {
     grid-template-columns: 85px auto;
     padding: 13px;
     background: #f7f8fa;
-    box-shadow: 0 2px 5px rgba(38,51,77,.03);
     border-radius: 10px
 }
 
@@ -5368,8 +5421,25 @@ section {
 }
 
 .create-review-popup__label {
-    margin-top: 5px;
-    display: flex
+    margin-top: 10px;
+    display: flex;
+    background: var(--light-gray);
+    border-radius: 8px
+}
+
+.create-review-popup__input {
+    background: var(--accent-gradient-2-alt);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-top: 0
+}
+
+.create-review-popup__textarea {
+    background: var(--accent-gradient-2-alt);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
 }
 
 .create-review-popup__add-picture {
@@ -5453,7 +5523,6 @@ section {
     display: flex;
     padding: 13px 39px;
     background: #f7f8fa;
-    box-shadow: 0 2px 5px rgba(38,51,77,.03);
     border-radius: 100px
 }
 
@@ -5474,11 +5543,6 @@ section {
     height: 50px;
     border-radius: 50%;
     background: rgba(153,251,255,.31)
-}
-
-.our-credo__body,.why__content {
-    border-radius: 8px;
-    text-align: center
 }
 
 .order__copy--text {
@@ -5538,14 +5602,12 @@ section {
 }
 
 .about-us__btn {
-    margin-top: 40px;
     max-width: 207px;
     min-width: min(100%,207px)
 }
 
 .about-us__image {
     flex: 1 1 100%;
-    margin-top: 40px;
     max-width: 400px;
     position: relative
 }
@@ -5573,8 +5635,8 @@ section {
 .our-credo__body {
     background: rgba(255,255,255,.63);
     box-shadow: 0 4px 14px rgba(0,0,0,.07);
-    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    border-radius: 8px;
     padding: 0 15px 30px;
     display: -ms-grid;
     display: grid
@@ -5640,12 +5702,14 @@ section {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     margin-top: -25px;
-    padding: 30px 15px
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 8px
 }
 
-.why__title {
-    background: rgba(0,0,0,0);
-    color: #828282
+.services__title,.why__title {
+    color: #828282;
+    background: rgba(0,0,0,0)
 }
 
 .why__text p {
@@ -5664,6 +5728,8 @@ section {
 }
 
 .services__list {
+    -ms-grid-row-align: center;
+    align-self: center;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
@@ -5726,8 +5792,6 @@ section {
     overflow: hidden;
     border-radius: 8px;
     z-index: -1;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -5772,7 +5836,8 @@ section {
 }
 
 .advantages__title {
-    text-align: center
+    text-align: center;
+    font-weight: 600
 }
 
 .advantages__list {
@@ -5955,7 +6020,7 @@ section {
     }
 
     .shop__aside--body {
-        padding: 25px
+        padding: 25px 25px 10px
     }
 
     .product__buy {
@@ -6152,10 +6217,6 @@ section {
 
     .footer__privacy ul {
         justify-content: stretch
-    }
-
-    .footer__privacy ul li a {
-        font-size: 1rem
     }
 }
 
@@ -6450,9 +6511,19 @@ section {
 }
 
 @media (min-width:970px) {
+    .container:not(._large),.container:not(._min) {
+        padding-left: max(var(--container-padding),50% - 650.5px);
+        padding-right: max(var(--container-padding),50% - 650.5px)
+    }
+
     .container._min {
         padding-left: max(var(--container-padding),50% - 485px);
         padding-right: max(var(--container-padding),50% - 485px)
+    }
+
+    .container._large {
+        padding-left: max(var(--container-padding),50% - 861px);
+        padding-right: max(var(--container-padding),50% - 861px)
     }
 }
 
@@ -6780,8 +6851,13 @@ section {
         grid-template-columns: 60% auto
     }
 
+    .contact-us__form {
+        -ms-grid-row-align: self-start;
+        align-self: self-start
+    }
+
     .contact-us__info {
-        margin-top: 0;
+        margin-top: 30px;
         margin-left: 80px
     }
 
@@ -7289,16 +7365,6 @@ section {
 @media (min-width:1301px) {
     .about-us__bg--element:nth-child(2),.intro__bg--element:nth-child(1) {
         display: block
-    }
-
-    .container:not(._large),.container:not(._min) {
-        padding-left: max(var(--container-padding),50% - 650.5px);
-        padding-right: max(var(--container-padding),50% - 650.5px)
-    }
-
-    .container._large {
-        padding-left: max(var(--container-padding),50% - 861px);
-        padding-right: max(var(--container-padding),50% - 861px)
     }
 
     .header__search {
