@@ -269,7 +269,7 @@ section {
 	margin: -5px;
 	& .swiper-pagination-bullet {
 		width: 10px; height: 10px;
-		margin: 5px;
+		margin: 0 5px !important;
 		opacity: 1;
 		background: #F1F1F1;
 
