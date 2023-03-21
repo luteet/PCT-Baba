@@ -490,6 +490,24 @@ window.onresize = resize;
 // =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
+// =-=-=-=-=-=-=-=-=-=-=-=- <scroll> -=-=-=-=-=-=-=-=-=-=-=-=
+
+//let offsetHeaderCheck = 
+function scroll() {
+	if(header.offsetTop >= 50 && !header.classList.contains('_active')) {
+		header.classList.add('_active');
+	} else if(header.classList.contains('_active') && header.offsetTop < 50) {
+		header.classList.remove('_active');
+	}
+}
+
+scroll()
+
+window.addEventListener('scroll', scroll)
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </scroll> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 let reviewsSlider = new Swiper('.reviews__slider', {

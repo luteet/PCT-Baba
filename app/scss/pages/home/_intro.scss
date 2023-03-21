@@ -10,17 +10,16 @@
 	// .intro__bg
 
 	&__bg {
-		display: none;
+		user-select: none; pointer-events: none;
 
+		position: absolute;
+		left: 0; top: 0;
+		width: 100%; height: 100%;
+		z-index: -1;
+
+		display: flex;
+		justify-content: center;
 		@include _992 {
-			user-select: none; pointer-events: none;
-
-			position: absolute;
-			left: 0; top: 0;
-			width: 100%; height: 100%;
-			z-index: -1;
-	
-			display: flex;
 			justify-content: flex-end;
 		}
 		
@@ -31,20 +30,55 @@
 		// .intro__bg--element
 
 		&--element {
-			@include _992 {
-				width: 300px;
-			}
 			
 			&:nth-child(1) {
-				display: none;
+				display: block;
+				width: 150px;
+				position: absolute;
+				left: -30px; top: 0;
+				opacity: .5;
+				//display: none;
+
+				@include _992 {
+					position: static;
+					opacity: 1;
+					display: none;
+				}
+
+				
 				@media (min-width: #{$container}px) {
 					display: block;
+					width: 300px;
 				}
 			}
-			& img {
+
+			&:nth-child(2) {
+				//display: none;
+				position: absolute;
+				right: -100px; top: -70px;
+				width: 200px;
+				opacity: .3;
+
 				@include _992 {
-					width: 100%; height: auto;
+					width: 300px;
+					display: block;
+					position: static;
+					opacity: 1;
 				}
+			}
+
+			&:nth-child(3) {
+				/* display: block;
+				width: 100%; min-width: 900px;
+				transform: translate(0,-100px); */
+				display: none;
+				@include _992 {
+					display: none;
+				}
+			}
+
+			& img {
+				width: 100%; height: auto;
 			}
 		}
 	}
@@ -52,7 +86,7 @@
 	// .intro__info
 
 	&__info {
-		margin-top: 40px;
+		//margin-top: 40px;
 		width: 100%;
 		text-align: center;
 		@include _768 {
