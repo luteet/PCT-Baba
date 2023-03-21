@@ -3804,10 +3804,6 @@ section {
     opacity: .5
 }
 
-.intro__bg--element:nth-child(3),.intro__image--decor {
-    display: none
-}
-
 .intro__bg--element:nth-child(2) {
     position: absolute;
     right: -100px;
@@ -3846,6 +3842,10 @@ section {
     width: 100%;
     position: relative;
     padding-top: 107.283465%
+}
+
+.intro__image--decor {
+    display: none
 }
 
 .intro__image img {
@@ -6816,10 +6816,6 @@ section {
     .intro__bg--element:nth-child(2) {
         width: 300px;
         display: block
-    }
-
-    .intro__bg--element:nth-child(3) {
-        display: none
     }
 
     .intro__info {

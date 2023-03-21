@@ -37,7 +37,6 @@
 				position: absolute;
 				left: -30px; top: 0;
 				opacity: .5;
-				//display: none;
 
 				@include _992 {
 					position: static;
@@ -53,7 +52,7 @@
 			}
 
 			&:nth-child(2) {
-				//display: none;
+				
 				position: absolute;
 				right: -100px; top: -70px;
 				width: 200px;
@@ -64,16 +63,6 @@
 					display: block;
 					position: static;
 					opacity: 1;
-				}
-			}
-
-			&:nth-child(3) {
-				/* display: block;
-				width: 100%; min-width: 900px;
-				transform: translate(0,-100px); */
-				display: none;
-				@include _992 {
-					display: none;
 				}
 			}
 
