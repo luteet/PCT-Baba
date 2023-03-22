@@ -288,48 +288,47 @@ body.addEventListener('click', function (event) {
 	// =-=-=-=-=-=-=-=-=-=- </shop categories> -=-=-=-=-=-=-=-=-=-=-
 
 
-
+	
 	// =-=-=-=-=-=-=-=-=-=- <FAQ> -=-=-=-=-=-=-=-=-=-=-
-
+	
 	const faqItem = $('.faq__item');
 	if (faqItem) {
-
+	
 		if (!faqItemCheck) {
-
-			faqItemCheck = true;
-
-			faqItem.classList.add('_animating');
-
-			const faqItemContent = faqItem.querySelector('.faq__item--content'),
-				activeFaqItem = document.querySelector('.faq__item._active');
-
-			if (!faqItem.classList.contains('_active')) {
-
-				if (activeFaqItem) {
-					activeFaqItem.classList.remove('_active');
-					activeFaqItem.querySelector('.faq__item--content').style.display = 'block';
-					slideUp(activeFaqItem.querySelector('.faq__item--content'));
-				}
-
-				faqItem.classList.add('_active');
-				slideDown(faqItemContent);
-
-			} else {
-
-				faqItemContent.style.display = 'block';
-				slideUp(faqItemContent);
-				faqItem.classList.remove('_active');
-
+		faqItemCheck = true;
+	
+		faqItem.classList.add('_animating');
+	
+		const faqItemContent = faqItem.querySelector('.faq__item--content'),
+		activeFaqItem = document.querySelector('.faq__item._active');
+	
+		if (!faqItem.classList.contains('_active')) {
+	
+			if (activeFaqItem) {
+				activeFaqItem.classList.remove('_active');
+				activeFaqItem.querySelector('.faq__item--content').style.display = 'block';
+				slideUp(activeFaqItem.querySelector('.faq__item--content'));
 			}
-
-			setTimeout(() => {
-				faqItemCheck = false;
-			},300)
+	
+			faqItem.classList.add('_active');
+			slideDown(faqItemContent);
+	
+		} else {
+	
+			faqItemContent.style.display = 'block';
+			slideUp(faqItemContent);
+			faqItem.classList.remove('_active');
+	
+		}
+	
+		setTimeout(() => {
+			faqItemCheck = false;
+		},300)
+	
 		}
 
-
 	}
-
+	
 	// =-=-=-=-=-=-=-=-=-=- </FAQ> -=-=-=-=-=-=-=-=-=-=-
 
 
@@ -373,11 +372,6 @@ body.addEventListener('click', function (event) {
 // =-=-=-=-=-=-=-=-=-=- <custom select> -=-=-=-=-=-=-=-=-=-=-
 
 document.querySelectorAll('.select').forEach(select => {
-	/* let data = [];
-	
-	select.querySelectorAll('option').forEach(option => {
-		data.push({text: option.textContent, data: option.dataset})
-	}) */
 
 	new SlimSelect({
 
@@ -492,7 +486,6 @@ window.onresize = resize;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <scroll> -=-=-=-=-=-=-=-=-=-=-=-=
 
-//let offsetHeaderCheck = 
 function scroll() {
 	if(header.offsetTop >= 50 && !header.classList.contains('_active')) {
 		header.classList.add('_active');

@@ -6627,10 +6627,6 @@ section {
         pointer-events: none
     }
 
-    .header,.header._active {
-        background: var(--light-gray)
-    }
-
     .header__nav,.header__search--body,.intro__bg--element:nth-child(1),.intro__bg--element:nth-child(2) {
         opacity: 1;
         position: static
@@ -6748,7 +6744,8 @@ section {
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 11px;
-        padding-bottom: 5px
+        padding-bottom: 5px;
+        background: var(--light-gray)
     }
 
     .header__search {
