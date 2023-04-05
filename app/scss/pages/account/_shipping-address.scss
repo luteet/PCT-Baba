@@ -5,7 +5,7 @@
 
 	@include _550 {
 		gap: 30px 10px;
-		grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+		grid-template-columns: repeat(auto-fill, minmax(200px, auto));
 	}
 
 	padding: 15px;
@@ -47,6 +47,7 @@
 
 	&__submit {
 		margin-top: 30px;
+		align-self: self-end;
 		@include _550 {
 			grid-column: 2 span;
 			margin-top: 0;

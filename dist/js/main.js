@@ -508,7 +508,7 @@ let reviewsSlider = new Swiper('.reviews__slider', {
 	spaceBetween: 20,
 	slidesPerView: 1,
 	speed: 500,
-	loop: true,
+	//loop: true,
 	pagination: {
 		el: '.reviews__nav .swiper-pagination',
 		clickable: true,

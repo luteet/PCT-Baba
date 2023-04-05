@@ -71,7 +71,7 @@
 			display: grid;
 			grid-template-columns: 50% 50%;
 			@media (min-width: 390px) {
-				grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+				grid-template-columns: repeat(auto-fill, minmax(150px, auto));
 			}
 			@include _992 {
 				grid-template-columns: minmax(auto, 20%) minmax(auto, 20%) minmax(auto, 15%) minmax(auto, 25%) auto;
